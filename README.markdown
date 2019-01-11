@@ -1,7 +1,7 @@
-Infinite Mario Bros.
+Infinite Tux.
 ======================
-This is a great mario game that will bring tons of fun to your day! Thank you Chris Lewis for putting this out there!<br>
-I've added a full screen mode and the ability to exit the game by hitting escape.<br>
+This is a great mario game clone that will bring tons of fun to your day! Thank you Chris Lewis for putting this out there!<br>
+I've replaced all of the proprietary artwork with stuff I created or downloaded and I've added a full screen mode and the ability to exit the game by hitting escape.<br>
 Also added some scripts to help compile the game.
 
 [Infinite Mario Bros](http://www.mojang.com/notch/mario/) source code has a bug in the timing, which prevents it working on Mac OS X, and maybe other platforms. This version uses the timing from the Mario AI competition, and is Mac-compatible.
