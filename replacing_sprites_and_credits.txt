@@ -31,7 +31,8 @@ font.gif --> done
 endscene.gif -> replaced with a dancing tux from http://pngimg.com/download/27024
 gameovergost.gif --> done
 
-
+---icon---
+The 256x256 pixel tux image used for the icon, is from http://www.rw-designer.com/icon-detail/3054
 
 
 Music and sound credits
@@ -60,3 +61,4 @@ fireball.wav -> replaced with shoot.wav from supertux sound inventory
 jump.wav - > replaced with jump.wav from supertux sound inventory
 breakblock.wav -> replaced with synth_misc_08.ogg by rubberduck : https://opengameart.org/content/50-cc0-retro-synth-sfx
 cannon.wav -> replaced with explosion.wav from supertux sound inventory
+
