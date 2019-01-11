@@ -1,0 +1,62 @@
+
+After some research it seems that the artwork is proprietary so
+my plan is to replace all the proprietary artwork with open source
+stuff.
+
+First I'll go through the code and see what is actually being used and 
+then I'll remove what isn't being used.
+
+When I've broken it down to the basic sprites and sounds, I'll 
+begin to replace them keeping the positions the same on the sprite sheets.
+
+
+Sprites
+-------
+I really couldn't find artwork that I could pop in so I decided
+to draw everything. I pretty much made it all with mtPaint and
+kolour paint. I made sure to credit anything I didn't create.
+ 
+mariosheet.png --> done
+smallmariosheet.png --> done
+firemariosheet.png --> done
+enemysheet.png --> done
+itemsheet.png --> done
+mapsheet.png --> done
+worldmap.png --> done
+particlesheet.png --> done
+bgsheet.png --> done
+logo.gif --> done
+title.gif --> done
+font.gif --> done
+endscene.gif -> replaced with a dancing tux from http://pngimg.com/download/27024
+gameovergost.gif --> done
+
+
+
+
+Music and sound credits
+
+---music---
+#smwovr1.mid -> replaced with finished.mid by Jan125: https://opengameart.org/content/stereotypical-90s-space-shooter-music
+smwovr1.mid -> replaced with Long Away Home.mid by nene: https://opengameart.org/content/long-away-home-8bit
+smb3undr.mid -> replaced with ChaseMidi.mid by Ted Kerr: https://opengameart.org/sites/default/files/ChaseMidi.mid
+smb3map1.mid ->replaced with 2.mid by  Jan125 : https://opengameart.org/sites/default/files/files_0.zip
+smwfortress.mid-> replaced with 1.mid by Jan125 : https://opengameart.org/sites/default/files/files_0.zip
+smwtitle.mid -> replaced with archvile.mid by Fredrik Johansson : https://github.com/fredrik-johansson/midi
+
+
+---sound effects---
+exit.wav -> replaced with start.ogg by Jan125 : https://opengameart.org/sites/default/files/_release.zip
+death.wav -> replaced with KL Peach Game Over III.wav by Kim Lightyear https://opengameart.org/sites/default/files/KL%20Peach%20Game%20Over%20III.wav
+1-up.wav r -> replaced with fire-flower.wav from supertux sound inventory.
+powerup.wav -> replaced with Power Up.wav by Quitschie : https://opengameart.org/content/power-up-level-up-beansjam
+powerdown.wav -> replaced with MachinePowerOff.ogg by Cough-E : https://opengameart.org/content/machine-shutting-down
+bump.wav -> replaced with sfx_sounds_impact1.wav by Juhani Junkala : juhani.junkala@musician.org
+stomp.wav -> replaced with sfx_alarm_loop6 by Juhani Junkala : juhani.junkala@musician.org
+kick.wav -> replaced with sfx_movement_ladder1loop.wav by Juhani Junkala : juhani.junkala@musician.org
+sprout.wav -> replaced with sfx_sound_neutral7.wav by Juhani Junkala : juhani.junkala@musician.org
+coin.wav -> replaced by sfx_coin_double1.wav  by Juhani Junkala : juhani.junkala@musician.org
+fireball.wav -> replaced with shoot.wav from supertux sound inventory
+jump.wav - > replaced with jump.wav from supertux sound inventory
+breakblock.wav -> replaced with synth_misc_08.ogg by rubberduck : https://opengameart.org/content/50-cc0-retro-synth-sfx
+cannon.wav -> replaced with explosion.wav from supertux sound inventory

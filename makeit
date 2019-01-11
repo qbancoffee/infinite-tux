@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ -d "infinitetux" ]; then
+    rm -rf infinitetux
+fi
+
+if [ -d "dist" ]; then
+    rm -rf dist
+fi   
+
+mkdir infinitetux
+mkdir dist
+
+javac -source 1.6 -target 1.6 -d \
+./infinitetux ./src/main/java/com/mojang/mario/*.java \
+./src/main/java/com/mojang/mario/level/*.java \
+./src/main/java/com/mojang/mario/mapedit/*.java \
+./src/main/java/com/mojang/mario/sprites/*.java \
+./src/main/java/com/mojang/sonar/*.java \
+./src/main/java/com/mojang/sonar/mixer/*.java \
+./src/main/java/com/mojang/sonar/sample/*.java
+
+cp -R ./src/main/resources/* ./infinitetux
+
+jar cfm infinitetux.jar manifest.txt -C ./infinitetux .
+mv infinitetux.jar ./dist
+rm -rf infinitetux
+
+echo "#!/bin/bash" > ./dist/infinitetux
+echo 'MAINCLASS="com.mojang.mario.FrameLauncher"' >> ./dist/infinitetux
+echo 'OPTION=$1"s"' >> ./dist/infinitetux
+echo 'if [ "$OPTION" == "fs" ]; then' >> ./dist/infinitetux
+echo     'MAINCLASS="com.mojang.mario.FullScreenFrameLauncher"' >> ./dist/infinitetux
+echo 'fi' >> ./dist/infinitetux
+echo 'java -cp .:infinitetux.jar $MAINCLASS' >> ./dist/infinitetux
+chmod +x ./dist/infinitetux
+
+
+
+
+
+

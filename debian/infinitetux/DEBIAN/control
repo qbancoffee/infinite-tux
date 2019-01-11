@@ -1,0 +1,11 @@
+Package: infinitetux
+Version: 1.0
+Architecture: all
+Maintainer: qbancoffee <qbancoffee@yahoo.com>
+Installed-Size: 1175
+Depends: jarwrapper, default-jre | java7-runtime
+Section: x11
+Priority: optional
+Homepage: https://github.com/cflewis/Infinite-Mario-Bros
+Description: Slightly more compatible version of Infinite Mario.
+ Java based Mario Bros. clone that has had the artwork changed with open source files. Tux is the main character instead of Mario
