@@ -1,7 +1,0 @@
-#!/bin/bash
-MAINCLASS="com.mojang.mario.FrameLauncher"
-OPTION=$1"s"
-if [ "$OPTION" == "fs" ]; then
-MAINCLASS="com.mojang.mario.FullScreenFrameLauncher"
-fi
-java -cp .:/usr/lib/infinitetux/infinitetux.jar $MAINCLASS

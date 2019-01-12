@@ -1,9 +1,0 @@
-[Desktop Entry]
-Comment=Infinite Tux.
-Terminal=false
-Name=Infinite Tux.
-Exec=/usr/bin/infinitetux
-Type=Application
-Icon=/usr/share/doc/infinitetux/icon.png
-NoDisplay=false
-Categories=Game

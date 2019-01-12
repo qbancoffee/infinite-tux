@@ -1,8 +1,0 @@
-#!/usr/bin/make -f
-%:
-	dh $@
-
-binary:
-	make install DESTDIR=debian/infinitetux DESTDIRI=/usr PREFIXI=/usr/lib STARTDIRI=/usr/bin MAKEDEB=1
-	dh_gencontrol
-	dh_builddeb
