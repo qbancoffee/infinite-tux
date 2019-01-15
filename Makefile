@@ -93,13 +93,14 @@ DESCRIPTION    = " Slightly more compatible version of Infinite Mario."
 EXTDESCRIPTION = " Java based Mario Bros. clone that has had the artwork changed \
 with open source files. Tux is the main character instead of Mario"
 ARCH           = "all"
-HOMEPAGE       = "https://github.com/cflewis/Infinite-Mario-Bros"
+HOMEPAGE       = "https://github.com/qbancoffee/infinite-tux"
 DEPENDS        = "\$${misc:Depends}, jarwrapper, default-jre | \
 java7-runtime"
 ##############MISC######################################################
 MAKEDEB        = 0
 
 
+.NOTPARALLEL:
 
 all: clean createdirs build copyres archive dist makescript desktop
 
