@@ -20,11 +20,11 @@ Compiling and running
 The following was tested on Ubuntu 16.04 and 18.04. At a minimum you'll need a JDK of at least 1.6.<br>
 on Ubuntu you can install 1.8 like this. 
 
-You can compile with the following.
-Maven
-Make
-makeit
-makeit.bat(for windows)
+You can compile via any of the following methods.
+* Maven
+* Make
+* makeit
+* makeit.bat(for windows)
 
 ```bash
 sudo apt-get install openjdk-8-jdk
