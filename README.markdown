@@ -4,13 +4,27 @@ This is a great mario game clone that will bring tons of fun to your day! Thank 
 I've replaced all of the proprietary artwork with stuff I created or downloaded and I've added a full screen mode and the ability to exit the game by hitting escape.<br>
 Also added some scripts to help compile the game.
 
+Now it's completely open source!
+
 [Infinite Mario Bros](http://www.mojang.com/notch/mario/) source code has a bug in the timing, which prevents it working on Mac OS X, and maybe other platforms. This version uses the timing from the Mario AI competition, and is Mac-compatible.
 
+Problems with OpenJDK on Ubuntu 14.04 and 16.04
+-----------------------------------------------
+Under Ubuntu 14.04 and 16.04 the graphics are not rendered correctly at the window edges when when running the game with an OpenJDK from the
+Ubuntu repositories. However, everything works as it should when using a downloaded OpenJDK binary from https://openjdk.java.net or by installing the Oracle JRE even if compiled with OpenJDK<br>
+<br>
+This is not an issue with an OpenJDK from the Ubuntu 18.04 repositories.
 
 Compiling and running
 ---------------------
 The following was tested on Ubuntu 16.04 and 18.04. At a minimum you'll need a JDK of at least 1.6.<br>
 on Ubuntu you can install 1.8 like this. 
+
+You can compile with the following.
+Maven
+Make
+makeit
+makeit.bat(for windows)
 
 ```bash
 sudo apt-get install openjdk-8-jdk
@@ -167,12 +181,4 @@ Install
 ```bash
 sudo dpkg -i infinitetux_1.0_all.deb
 ```
-
-Problems with OpenJDK on Ubuntu 14.04 and 16.04
------------------------------------------------
-Under Ubuntu 14.04 and 16.04 the graphics are not rendered correctly at the window edges when when running the game with an OpenJDK from the
-Ubuntu repositories. However, everything works as it should when using a downloaded OpenJDK binary from https://openjdk.java.net .<br>
-Everything works fine on these two distributions if you run the game with the a JRE provided by Oracle even if compiled with OpenJDK.
-<br>
-This is not an issue with an OpenJDK from the Ubuntu 18.04 repositories.
 
