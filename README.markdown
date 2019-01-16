@@ -10,6 +10,13 @@ Now it's completely open source!
 
 <br>
 
+Gameplay Video
+--------------
+
+[![Gameplay Video](https://img.youtube.com/vi/51M4KL25qoM/0.jpg)](https://www.youtube.com/watch?v=51M4KL25qoM)
+
+<br>
+
 ScreenShots
 -----------
 
@@ -24,6 +31,8 @@ ScreenShots
 ![Infinite Tux Dungeon](/screenshots/tux_dungeon_jump.png?raw=true "Infinite Tux Dungeon")
 
 ![Infinite Tux Castle](/screenshots/tux_castle_cannon.png?raw=true "Infinite Tux Castle")
+
+
 
 
 <br>
