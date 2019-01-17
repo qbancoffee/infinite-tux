@@ -1,6 +1,6 @@
-Infinite Tux.
-======================
-This is a great mario game clone that will bring tons of fun to your day! Thank you Chris Lewis for putting this out there!<br>
+Infinite Tux For Windows, Linux, and OSX
+=========================================
+This is a great mario game clone for Widnows, Linux, and OSX that will bring tons of fun to your day! Thank you Chris Lewis for putting this out there!<br>
 I've replaced all of the proprietary artwork with stuff I created or downloaded and I've added a full screen mode and the ability to exit the game by hitting escape.<br>
 Also added some scripts to help compile the game.
 
