@@ -10,6 +10,13 @@ Now it's completely open source!
 
 <br>
 
+Download executable
+===================
+
+https://github.com/qbancoffee/infinite-tux/releases
+
+<br>
+
 Gameplay Video
 --------------
 
