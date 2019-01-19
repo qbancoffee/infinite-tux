@@ -13,12 +13,14 @@ public class FullScreenFrameLauncher
         GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment(); 
         GraphicsDevice device = env.getDefaultScreenDevice();
         device.setFullScreenWindow(frame);  
-        MarioComponent mario = new MarioComponent(frame.getWidth(), frame.getHeight());
+        MarioComponent mario = new MarioComponent(320*frame.getHeight()/240, frame.getHeight());
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //frame.setUndecorated(true);
-        frame.setContentPane(mario);
+        frame.setLayout( new GridBagLayout() );
+        frame.add(mario, new GridBagConstraints());        
+        //frame.setContentPane(mario);
         frame.pack();
-        frame.setResizable(true);
+        //frame.setResizable(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         

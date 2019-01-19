@@ -126,7 +126,7 @@ desktop:
 	echo "Comment="$(COMMENT) >> $(JPACKAGE).desktop
 	echo "Terminal=false" >> $(JPACKAGE).desktop
 	echo "Name="$(TITLE) >> $(JPACKAGE).desktop
-	echo "Exec=$(STARTDIRI)/$(JPACKAGE)" >> $(JPACKAGE).desktop
+	echo 'Exec=/usr/bin/env bash -c "$(STARTDIRI)/$(JPACKAGE) f"' >> $(JPACKAGE).desktop
 	echo "Type=Application" >> $(JPACKAGE).desktop
 	echo "Icon=$(ICONDIRI)/icon.png" >> $(JPACKAGE).desktop
 	echo "NoDisplay=false" >> $(JPACKAGE).desktop
