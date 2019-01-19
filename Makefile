@@ -121,6 +121,7 @@ dist:
 	mkdir ./dist
 	cp $(FILENAME) dist
 	rm $(FILENAME)
+	chmod +x ./dist/$(FILENAME)
 desktop:
 	echo "[Desktop Entry]" > $(JPACKAGE).desktop
 	echo "Comment="$(COMMENT) >> $(JPACKAGE).desktop

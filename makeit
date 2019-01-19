@@ -33,7 +33,7 @@ echo     'MAINCLASS="com.mojang.mario.FullScreenFrameLauncher"' >> ./dist/infini
 echo 'fi' >> ./dist/infinitetux
 echo 'java -cp .:infinitetux.jar $MAINCLASS' >> ./dist/infinitetux
 chmod +x ./dist/infinitetux
-
+chmod +x ./dist/infinitetux.jar
 
 
 
