@@ -17,6 +17,13 @@ https://github.com/qbancoffee/infinite-tux/releases
 
 <br>
 
+AI Gameplay Video
+--------------
+
+[![AI Gameplay Video](https://img.youtube.com/vi/eiG-bJdwCyc/0.jpg)](https://www.youtube.com/watch?v=eiG-bJdwCyc)
+
+<br>
+
 Gameplay Video
 --------------
 
