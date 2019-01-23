@@ -20,6 +20,8 @@ javac -source 1.6 -target 1.6 -d \
 ./src/main/java/com/mojang/sonar/sample/*.java
 
 cp -R ./src/main/resources/* ./infinitetux
+cp copyright_bsd_3_clause.txt ./infinitetux
+cp copyright ./infinitetux
 
 jar cfm infinitetux.jar manifest.txt -C ./infinitetux .
 mv infinitetux.jar ./dist

@@ -112,6 +112,8 @@ build:
 
 copyres:
 	cp -R ./src/main/resources/* $(JPACKAGE)
+	cp copyright_bsd_3_clause.txt $(JPACKAGE)
+	cp copyright $(JPACKAGE) 
 
 archive:
 	$(JAR) cfm $(FILENAME) manifest.txt -C $(JPACKAGE) .
