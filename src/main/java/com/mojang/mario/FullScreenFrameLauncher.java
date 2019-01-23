@@ -9,7 +9,7 @@ public class FullScreenFrameLauncher
     {
 		//Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         
-        JFrame frame = new JFrame("Infinite Mario Bros.");
+        JFrame frame = new JFrame("Infinite Tux");
         GraphicsEnvironment env = GraphicsEnvironment.getLocalGraphicsEnvironment(); 
         GraphicsDevice device = env.getDefaultScreenDevice();
         device.setFullScreenWindow(frame);  

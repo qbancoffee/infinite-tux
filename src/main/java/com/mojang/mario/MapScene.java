@@ -455,7 +455,7 @@ public class MapScene extends Scene
             }
         }
         
-        drawStringDropShadow(g, "MARIO " + df.format(Mario.lives), 0, 0, 7);
+        drawStringDropShadow(g, "TUX " + df.format(Mario.lives), 0, 0, 7);
 
         drawStringDropShadow(g, "WORLD "+(worldNumber+1), 32, 0, 7);
     }

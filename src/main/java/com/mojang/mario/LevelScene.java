@@ -101,7 +101,7 @@ public class LevelScene extends Scene implements SpriteContext
         sprites.add(mario);
         startTime = 1;
         
-        timeLeft = 200*15;
+        timeLeft = (200 + 50 * (level.width/320 - 1) ) * 15;
 
         tick = 0;
     }
@@ -341,7 +341,7 @@ public class LevelScene extends Scene implements SpriteContext
         g.setColor(Color.BLACK);
         layer.renderExit1(g, tick, paused?0:alpha);
         
-        drawStringDropShadow(g, "MARIO " + df.format(Mario.lives), 0, 0, 7);
+        drawStringDropShadow(g, "TUX " + df.format(Mario.lives), 0, 0, 7);
         drawStringDropShadow(g, "00000000", 0, 1, 7);
         
         drawStringDropShadow(g, "COIN", 14, 0, 7);

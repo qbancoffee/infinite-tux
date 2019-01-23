@@ -604,6 +604,7 @@ public class Mario extends Sprite
     {
         xDeathPos = (int) x;
         yDeathPos = (int) y;
+        world.mario.setLarge(false, false);
         world.paused = true;
         deathTime = 1;
         Art.stopMusic();
@@ -615,18 +616,23 @@ public class Mario extends Sprite
     {
         if (deathTime > 0 || world.paused) return;
 
-        if (!fire)
+        if (!fire && large)
         {
             world.paused = true;
             powerUpTime = 3 * 6;
             world.sound.play(Art.samples[Art.SAMPLE_MARIO_POWER_UP], this, 1, 1, 1);
             world.mario.setLarge(true, true);
         }
-        else
+        else if( !fire && !large )
+        {
+			getMushroom();
+        }
+        else 
         {
             Mario.getCoin();
             world.sound.play(Art.samples[Art.SAMPLE_GET_COIN], this, 1, 1, 1);
-        }
+		}
+               
     }
 
     public void getMushroom()
