@@ -154,6 +154,7 @@ install:
 	chmod +x $(STARTDIR)/$(JPACKAGE)
 	cp icon.png $(ICONDIR)
 	cp copyright $(ICONDIR)
+	cp copyright_bsd_3_clause.txt $(ICONDIR)
 	cp $(JPACKAGE).desktop $(DESKTOPDIR)
 	gzip -9 --no-name -c changelog > $(ICONDIR)/changelog.gz
 	gzip -9 --no-name -c $(JPACKAGE).7 > $(MANDIR)/$(JPACKAGE).7.gz
@@ -214,7 +215,8 @@ deb:
 	
 	cp changelog $(DESTDIR_B4)/changelog
 	cp copyright $(DESTDIR_B4)/copyright
-
+	cp copyright_bsd_3_clause.txt $(DESTDIR_B4)/copyright_bsd_3_clause.txt
+    
 makescript:
 	echo "#!/bin/bash" > ./dist/$(JPACKAGE)
 	echo 'MAINCLASS="$(MAIN)"' >> ./dist/$(JPACKAGE)

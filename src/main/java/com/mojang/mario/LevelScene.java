@@ -69,7 +69,7 @@ public class LevelScene extends Scene implements SpriteContext
          else
          {*/
 //        level = LevelGenerator.createLevel(320, 15, levelSeed);
-        level = LevelGenerator.createLevel(320, 15, levelSeed, levelDifficulty, levelType);
+        level = LevelGenerator.createLevel(640, 15, levelSeed, levelDifficulty, levelType);
         //        }
 
         /*        if (recorder != null)
