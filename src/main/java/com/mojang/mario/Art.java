@@ -33,6 +33,7 @@ public class Art
     public static final int SAMPLE_LEVEL_EXIT = 11;
     public static final int SAMPLE_MARIO_1UP = 12;
     public static final int SAMPLE_MARIO_FIREBALL = 13;
+    public static final int SAMPLE_LOW_TIME = 14;
 
     public static Image[][] mario;
     public static Image[][] smallMario;
@@ -90,6 +91,7 @@ public class Art
                 samples[SAMPLE_LEVEL_EXIT] = sound.loadSample("/snd/exit.wav");
                 samples[SAMPLE_MARIO_1UP] = sound.loadSample("/snd/1-up.wav");
                 samples[SAMPLE_MARIO_FIREBALL] = sound.loadSample("/snd/fireball.wav");
+                samples[SAMPLE_LOW_TIME] = sound.loadSample("/snd/lowtime.wav");
             }
         }
         catch (Exception e)
@@ -178,4 +180,19 @@ public class Art
             }
         }
     }
+    public static void setTempoFactor(float factor)
+    {
+        if (sequencer != null)
+        {
+            try
+            {
+                sequencer.setTempoFactor((float)1.3);
+ 
+            }
+            catch (Exception e)
+            {
+            }
+        }    
+    }
+    
 }

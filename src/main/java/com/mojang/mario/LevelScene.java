@@ -24,6 +24,8 @@ public class LevelScene extends Scene implements SpriteContext
     public float xCam, yCam, xCamO, yCamO;
     public static Image tmpImage;
     private int tick;
+    private boolean isFast = false;
+    private boolean isMusicStopped = false;
 
     private LevelRenderer layer;
     private BgRenderer[] bgLayer = new BgRenderer[2];
@@ -40,6 +42,7 @@ public class LevelScene extends Scene implements SpriteContext
     private long levelSeed;
     private MarioComponent renderer;
     private int levelType;
+    private int musicType;
     private int levelDifficulty;
 
     public LevelScene(GraphicsConfiguration graphicsConfiguration, MarioComponent renderer, long seed, int levelDifficulty, int type)
@@ -77,13 +80,17 @@ public class LevelScene extends Scene implements SpriteContext
          recorder.addLong(LevelGenerator.lastSeed);
          }*/
 
-        if (levelType==LevelGenerator.TYPE_OVERGROUND)
+        if (levelType == LevelGenerator.TYPE_OVERGROUND) {
             Art.startMusic(1);
-        else if (levelType==LevelGenerator.TYPE_UNDERGROUND)
+            musicType = 1;
+        } else if (levelType == LevelGenerator.TYPE_UNDERGROUND) {
             Art.startMusic(2);
-        else if (levelType==LevelGenerator.TYPE_CASTLE)
+            musicType = 2;
+        } else if (levelType == LevelGenerator.TYPE_CASTLE) {
             Art.startMusic(3);
-        
+            musicType = 3;
+        }
+
 
         paused = false;
         Sprite.spriteContext = this;
@@ -125,6 +132,25 @@ public class LevelScene extends Scene implements SpriteContext
     public void tick()
     {
         timeLeft--;
+        
+        // stops music, plays sound and increases music tempo when there is 100
+        // seconds or less to play the level time=timeLeft/15
+        if (!isFast && timeLeft <= 1500) {
+            //Art.stopMusic();
+            //sound.play(Art.samples[Art.SAMPLE_LOW_TIME], new FixedSoundSource(xCam * 16, yCam + 120), 1, 1, 1);
+            Art.setTempoFactor((float) 1.3);
+            isMusicStopped = true;
+
+            isFast = true;
+        }
+        // restarts music after 2 seconds have elapsed
+        if (isMusicStopped && timeLeft <= 1470) {
+            //Art.startMusic(musicType);
+            isMusicStopped = false;
+
+        }
+        
+        
         if (timeLeft==0)
         {
             mario.die();
