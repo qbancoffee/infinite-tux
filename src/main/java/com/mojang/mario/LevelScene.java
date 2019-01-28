@@ -502,26 +502,32 @@ public class LevelScene extends Scene implements SpriteContext
         return 0;
     }
 
-    public void bump(int x, int y, boolean canBreakBricks)
+        public void bump(int x, int y, boolean canBreakBricks)
     {
         byte block = level.getBlock(x, y);
 
-        if ((Level.TILE_BEHAVIORS[block & 0xff] & Level.BIT_BUMPABLE) > 0)
-        {
+        if ((Level.TILE_BEHAVIORS[block & 0xff] & Level.BIT_BUMPABLE) > 0) {
             bumpInto(x, y - 1);
             level.setBlock(x, y, (byte) 4);
             level.setBlockData(x, y, (byte) 4);
 
-            if (((Level.TILE_BEHAVIORS[block & 0xff]) & Level.BIT_SPECIAL) > 0)
-            {
-                sound.play(Art.samples[Art.SAMPLE_ITEM_SPROUT], new FixedSoundSource(x * 16 + 8, y * 16 + 8), 1, 1, 1);
-                if (!Mario.large)
-                {
-                    addSprite(new Mushroom(this, x * 16 + 8, y * 16 + 8));
+            if (((Level.TILE_BEHAVIORS[block & 0xff]) & Level.BIT_SPECIAL) > 0) {
+                
+                // test for 1 up
+                if (((Level.TILE_BEHAVIORS[block & 0xff]) & Level.BIT_BLOCK_LOWER) > 0) {
+                    sound.play(Art.samples[Art.SAMPLE_ITEM_SPROUT], new FixedSoundSource(x * 16 + 8, y * 16 + 8), 1, 1, 1);
+                    addSprite(new OneUp(this, x * 16 + 8, y * 16 + 8));
+                    
                 }
-                else
-                {
-                    addSprite(new FireFlower(this, x * 16 + 8, y * 16 + 8));
+                
+                 // test for Mushroom or Fire Flower
+                if (((Level.TILE_BEHAVIORS[block & 0xff]) & Level.BIT_BLOCK_ALL) > 0) {
+                    sound.play(Art.samples[Art.SAMPLE_ITEM_SPROUT], new FixedSoundSource(x * 16 + 8, y * 16 + 8), 1, 1, 1);
+                    if (!Mario.large) {
+                        addSprite(new Mushroom(this, x * 16 + 8, y * 16 + 8));
+                    } else {
+                        addSprite(new FireFlower(this, x * 16 + 8, y * 16 + 8));
+                    }
                 }
             }
             else

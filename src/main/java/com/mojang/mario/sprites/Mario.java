@@ -2,6 +2,7 @@ package com.mojang.mario.sprites;
 
 
 import com.mojang.mario.Art;
+import static com.mojang.mario.Art.SAMPLE_MARIO_1UP;
 import com.mojang.mario.Scene;
 import com.mojang.mario.level.*;
 import com.mojang.mario.LevelScene;
@@ -651,6 +652,16 @@ public class Mario extends Sprite
             Mario.getCoin();
             world.sound.play(Art.samples[Art.SAMPLE_GET_COIN], this, 1, 1, 1);
         }
+    }
+
+    public void getOneUp() {
+        if (deathTime > 0 || world.paused) {
+            return;
+
+        }
+
+        get1Up();
+
     }
 
     public void kick(Shell shell)
