@@ -45,6 +45,7 @@ SOURCEFILES    = $(SOURCEDIR)/sonar/SoundListener.java \
                  $(SOURCEDIR)/mario/sprites/CoinAnim.java \
                  $(SOURCEDIR)/mario/sprites/Shell.java \
                  $(SOURCEDIR)/mario/sprites/Mushroom.java \
+                 $(SOURCEDIR)/mario/sprites/OneUp.java \
                  $(SOURCEDIR)/mario/AppletLauncher.java \
                  $(SOURCEDIR)/mario/TitleScene.java \
                  $(SOURCEDIR)/mario/WinScene.java \
