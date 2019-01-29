@@ -17,9 +17,12 @@ public class LevelEditor extends JFrame implements ActionListener
 
     private JButton loadButton;
     private JButton saveButton;
+    private JButton newButton;
     private JTextField nameField;
     private LevelEditView levelEditView;
     private TilePicker tilePicker;
+    private JLabel coordinates;
+    private String coordinateText="X=P , Y=Q";
     
     private JCheckBox[] bitmapCheckboxes = new JCheckBox[8];
 
@@ -29,7 +32,7 @@ public class LevelEditor extends JFrame implements ActionListener
         
         try
         {
-            Level.loadBehaviors(new DataInputStream(new FileInputStream("tiles.dat")));
+            Level.loadBehaviors(new DataInputStream(new FileInputStream("resources/tiles.dat")));
         }
         catch (Exception e)
         {
@@ -99,13 +102,19 @@ public class LevelEditor extends JFrame implements ActionListener
     {
         loadButton = new JButton("Load");
         saveButton = new JButton("Save");
+        newButton = new JButton("New");
         nameField = new JTextField("test.lvl", 10);
+        coordinates = new JLabel(coordinateText,10);
         loadButton.addActionListener(this);
         saveButton.addActionListener(this);
+        newButton.addActionListener(this);
+        
         JPanel panel = new JPanel();
         panel.add(nameField);
         panel.add(loadButton);
         panel.add(saveButton);
+        panel.add(newButton);
+        panel.add(coordinates);
         return panel;
     }
 
@@ -121,12 +130,27 @@ public class LevelEditor extends JFrame implements ActionListener
             {
                 levelEditView.getLevel().save(new DataOutputStream(new FileOutputStream(nameField.getText().trim())));
             }
+            if (e.getSource() == newButton)
+            {
+                levelEditView.getLevel().save(new DataOutputStream(new FileOutputStream(nameField.getText().trim())));
+            }            
         }
         catch (Exception ex)
         {
             JOptionPane.showMessageDialog(this, ex.toString(), "Failed to load/save", JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    
+    public void setCoordinates(int x , int y)
+    {
+        coordinateText="X=" + x +" , " +"Y="+y;
+        coordinates.setText(coordinateText);
+
+        //coordinates.repaint();
+    
+    }
+    
     
     public static void main(String[] args)
     {

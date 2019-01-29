@@ -35,6 +35,19 @@ public class LevelEditView extends JComponent implements MouseListener, MouseMot
         addMouseListener(this);
         addMouseMotionListener(this);
     }
+
+    public LevelEditView(TilePicker tilePicker, int levelLength, int levelWidth)
+    {
+        this.tilePicker = tilePicker;
+        level = new Level(levelLength, levelWidth);
+        Dimension size = new Dimension(level.width * 16, level.height * 16);
+        setPreferredSize(size);
+        setMinimumSize(size);
+        setMaximumSize(size);
+
+        addMouseListener(this);
+        addMouseMotionListener(this);
+    }    
     
     public void setLevel(Level level)
     {
@@ -121,6 +134,9 @@ public class LevelEditView extends JComponent implements MouseListener, MouseMot
     {
         xTile = e.getX() / 16;
         yTile = e.getY() / 16;
+        ((LevelEditor)this.getRootPane().getParent()).setCoordinates(xTile, yTile);
+       
+       
         repaint();
     }
 }
