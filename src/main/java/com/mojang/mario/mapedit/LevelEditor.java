@@ -32,7 +32,7 @@ public class LevelEditor extends JFrame implements ActionListener
         
         try
         {
-            Level.loadBehaviors(new DataInputStream(new FileInputStream("resources/tiles.dat")));
+            Level.loadBehaviors(new DataInputStream(new FileInputStream("tiles.dat")));
         }
         catch (Exception e)
         {
