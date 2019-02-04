@@ -1,6 +1,6 @@
 Infinite Tux For Windows, Linux, and OSX
 =========================================
-This is a great mario game clone for Widnows, Linux, and OSX that will bring tons of fun to your day! Thank you Chris Lewis for putting this out there!<br>
+This is a great mario game clone for Windows, Linux, and OSX that will bring tons of fun to your day! Thank you Chris Lewis for putting this out there!<br>
 I've replaced all of the proprietary artwork with stuff I created or downloaded and I've added a full screen mode and the ability to exit the game by hitting escape.<br>
 Also added some scripts to help compile the game.
 
@@ -53,7 +53,7 @@ ScreenShots
 
 Problems with OpenJDK on Ubuntu 14.04 and 16.04
 -----------------------------------------------
-Under Ubuntu 14.04 and 16.04 the graphics are not rendered correctly at the window edges when when running the game with an OpenJDK from the
+Under Ubuntu 14.04 and 16.04 the graphics are not rendered correctly at the window edges when running the game with an OpenJDK from the
 Ubuntu repositories. However, everything works as it should when using a downloaded OpenJDK binary from https://openjdk.java.net or by installing the Oracle JRE even if compiled with OpenJDK<br>
 <br>
 This is not an issue with an OpenJDK from the Ubuntu 18.04 repositories.
@@ -74,7 +74,7 @@ sudo apt-get install openjdk-8-jdk
 ```
 
 * With Maven
-if you dont have maven installed, this worked for me.
+if you don't have maven installed, this worked for me.
 ```bash
 sudo apt-get install maven
 ```
@@ -175,7 +175,7 @@ java -cp .:infinitetux.jar com.mojang.mario.FullScreenFrameLauncher
 
 On windows you should just have to double click on the makeit.bat file. I think you could double click on the
 jar file and it will start. You can always issue the commands from the command prompt. I still need to make a batch script that
-will run the game in full screen  mode.
+will run the game in full screen mode.
 
 Compile 
 ```windows
@@ -201,7 +201,7 @@ devscripts
 debhelper
 jarwrapper
 
-If you don't hae these installed, this worked for me.
+If you don't have these installed, this worked for me.
 
 ```bash
 sudo apt-get install devscripts debhelper jarwrapper
