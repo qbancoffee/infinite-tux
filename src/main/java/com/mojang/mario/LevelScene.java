@@ -35,6 +35,11 @@ public class LevelScene extends Scene implements SpriteContext
     public boolean paused = false;
     public int startTime = 0;
     private int timeLeft;
+    
+    private File tilesDir;
+    private File levelsDir;
+    private String tilesDataFilePath="";
+    private String levelsDataFilePath="";    
 
     //    private Recorder recorder = new Recorder();
     //    private Replayer replayer = null;
@@ -56,15 +61,65 @@ public class LevelScene extends Scene implements SpriteContext
 
     public void init()
     {
-        try
-        {
-            Level.loadBehaviors(new DataInputStream(LevelScene.class.getResourceAsStream("/tiles.dat")));
+        
+        // crete default dirs if they don't exist
+        
+        tilesDir = new File(System.getProperty("user.home") + File.separatorChar + "infinitetux_data");
+        try {
+            levelsDir = new File(tilesDir.getCanonicalPath().toString() + File.separator + "levels");
+    
+        } catch (IOException ex) {
+            ex.printStackTrace();
+
         }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-            System.exit(0);
-        }
+
+        try {
+            tilesDataFilePath = tilesDir.getCanonicalPath().toString() + File.separator + "tiles.dat";
+
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }   
+        
+        
+        // try and load tiles.dat from default data dir. If not create it and copy tiles.dat over
+        try {
+            System.out.println("Loading " + tilesDataFilePath);
+            Level.loadBehaviors(new DataInputStream(new FileInputStream(tilesDataFilePath)));
+        } catch (Exception e) {
+
+            try {
+                if (!tilesDir.exists()) {
+                    System.out.println("creating " + tilesDir.getName());
+                    tilesDir.mkdirs();
+                }
+                Level.loadBehaviors(new DataInputStream(LevelScene.class.getResourceAsStream("/tiles.dat")));
+                System.out.println("creating " + tilesDataFilePath);
+                Level.saveBehaviors(new DataOutputStream(new FileOutputStream(tilesDataFilePath)));
+                System.out.println("loading " + tilesDataFilePath);
+                Level.loadBehaviors(new DataInputStream(new FileInputStream(tilesDataFilePath)));
+
+            } catch (IOException e1) {
+                e1.printStackTrace();
+                try {
+
+                } catch (Exception e2) {
+                    e2.printStackTrace();
+
+                }
+
+            }
+            //JOptionPane.showMessageDialog(this, e.toString(), "Failed to load tile behaviors", JOptionPane.ERROR_MESSAGE);
+            //JOptionPane.showMessageDialog(this, e.toString(), "Failed to load tile behaviors", JOptionPane.ERROR_MESSAGE);
+        }        
+//        try
+//        {
+//            Level.loadBehaviors(new DataInputStream(LevelScene.class.getResourceAsStream("/tiles.dat")));
+//        }
+//        catch (IOException e)
+//        {
+//            e.printStackTrace();
+//            System.exit(0);
+//        }
         /*        if (replayer!=null)
          {
          level = LevelGenerator.createLevel(2048, 15, replayer.nextLong());
