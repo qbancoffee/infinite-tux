@@ -12,8 +12,7 @@ Now it's completely open source!
 
 Download executable
 ===================
-
-https://github.com/qbancoffee/infinite-tux/releases
+https://github.com/qbancoffee/infinite-tux/releases/tag/1.0
 
 <br>
 
