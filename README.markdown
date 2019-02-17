@@ -50,6 +50,11 @@ ScreenShots
 
 <br>
 
+Download executable
+===================
+https://github.com/qbancoffee/infinite-tux/releases/tag/1.0
+
+
 Problems with OpenJDK on Ubuntu 14.04 and 16.04
 -----------------------------------------------
 Under Ubuntu 14.04 and 16.04 the graphics are not rendered correctly at the window edges when running the game with an OpenJDK from the
