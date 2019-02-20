@@ -1,6 +1,7 @@
 package com.mojang.mario.sprites;
 
 import com.mojang.mario.LevelScene;
+import java.awt.Color;
 
 public class FlowerEnemy extends Enemy
 {
@@ -8,6 +9,7 @@ public class FlowerEnemy extends Enemy
     private int yStart;
     private int jumpTime = 0;
     private LevelScene world;
+    private Color translucent = new Color(0, 0, 0, 0);
     
     public FlowerEnemy(LevelScene world, int x, int y)
     {

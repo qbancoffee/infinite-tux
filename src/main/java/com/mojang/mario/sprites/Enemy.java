@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import com.mojang.mario.Art;
 import com.mojang.mario.LevelScene;
+import java.awt.Color;
 
 
 public class Enemy extends Sprite
@@ -43,6 +44,8 @@ public class Enemy extends Sprite
     private int wingTime = 0;
     
     public boolean noFireballDeath;
+    
+    private Color translucent = new Color(0, 0, 0, 0);
 
     public Enemy(LevelScene world, int x, int y, int dir, int type, boolean winged)
     {
@@ -396,7 +399,7 @@ public class Enemy extends Sprite
             else
             {
                 xFlipPic = !xFlipPic;
-                og.drawImage(sheet[wingTime / 4 % 2][4], xPixel + (xFlipPic ? wPic : 0) + (xFlipPic ? 10 : -10), yPixel + (yFlipPic ? hPic : 0) - 8, xFlipPic ? -wPic : wPic, yFlipPic ? -hPic : hPic, null);
+                og.drawImage(sheet[wingTime / 4 % 2][4], xPixel + (xFlipPic ? wPic : 0) + (xFlipPic ? 10 : -10), yPixel + (yFlipPic ? hPic : 0) - 8, xFlipPic ? -wPic : wPic, yFlipPic ? -hPic : hPic,(xFlipPic || yFlipPic)?null:translucent, null);
                 xFlipPic = !xFlipPic;
             }
         }
@@ -410,11 +413,11 @@ public class Enemy extends Sprite
 
             if (type == Enemy.ENEMY_GREEN_KOOPA || type == Enemy.ENEMY_RED_KOOPA)
             {
-                og.drawImage(sheet[wingTime / 4 % 2][4], xPixel + (xFlipPic ? wPic : 0) + (xFlipPic ? 10 : -10), yPixel + (yFlipPic ? hPic : 0) - 10, xFlipPic ? -wPic : wPic, yFlipPic ? -hPic : hPic, null);
+                og.drawImage(sheet[wingTime / 4 % 2][4], xPixel + (xFlipPic ? wPic : 0) + (xFlipPic ? 10 : -10), yPixel + (yFlipPic ? hPic : 0) - 10, xFlipPic ? -wPic : wPic, yFlipPic ? -hPic : hPic,(xFlipPic || yFlipPic)?null:translucent, null);
             }
             else
             {
-                og.drawImage(sheet[wingTime / 4 % 2][4], xPixel + (xFlipPic ? wPic : 0) + (xFlipPic ? 10 : -10), yPixel + (yFlipPic ? hPic : 0) - 8, xFlipPic ? -wPic : wPic, yFlipPic ? -hPic : hPic, null);
+                og.drawImage(sheet[wingTime / 4 % 2][4], xPixel + (xFlipPic ? wPic : 0) + (xFlipPic ? 10 : -10), yPixel + (yFlipPic ? hPic : 0) - 8, xFlipPic ? -wPic : wPic, yFlipPic ? -hPic : hPic,(xFlipPic || yFlipPic)?null:translucent, null);
             }
         }
     }

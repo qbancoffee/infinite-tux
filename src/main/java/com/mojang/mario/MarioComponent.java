@@ -24,6 +24,7 @@ public class MarioComponent extends JComponent implements Runnable, KeyListener,
     private boolean running = false;
     private int width, height;
     private GraphicsConfiguration graphicsConfiguration;
+    private Color translucent = new Color(0, 0, 0, 0);
     private Scene scene;
     private SonarSoundEngine sound;
     @SuppressWarnings("unused")
@@ -125,6 +126,7 @@ public class MarioComponent extends JComponent implements Runnable, KeyListener,
     public void run()
     {
         graphicsConfiguration = getGraphicsConfiguration();
+       
 
 
         //      scene = new LevelScene(graphicsConfiguration);
@@ -210,16 +212,16 @@ public class MarioComponent extends JComponent implements Runnable, KeyListener,
             {
                 if (useScale2x)
                 {
-                    g.drawImage(scale2x.scale(image), 0, 0, width, height, null);
+                    g.drawImage(scale2x.scale(image), 0, 0, width, height,translucent, null);
                 }
                 else
                 {
-                    g.drawImage(image, 0, 0, width, height, null);
+                    g.drawImage(image, 0, 0, width, height,translucent, null);
                 }
             }
             else
             {
-                g.drawImage(image, 0, 0, null);
+                g.drawImage(image, 0, 0,translucent, null);
             }
             
             if (delay > 0)
@@ -241,7 +243,7 @@ public class MarioComponent extends JComponent implements Runnable, KeyListener,
         char[] ch = text.toCharArray();
         for (int i = 0; i < ch.length; i++)
         {
-            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y, null);
+            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y,translucent, null);
         }
     }
 

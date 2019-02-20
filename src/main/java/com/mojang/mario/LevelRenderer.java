@@ -11,7 +11,7 @@ public class LevelRenderer
     private int yCam;
     private Image image;
     private Graphics2D g;
-    private static final Color transparent = new Color(0, 0, 0, 0);
+    private static final Color translucent = new Color(0, 0, 0, 0);
     private Level level;
 
     @SuppressWarnings("unused")
@@ -27,7 +27,7 @@ public class LevelRenderer
         this.height = height;
 
         this.level = level;
-        image = graphicsConfiguration.createCompatibleImage(width, height, Transparency.BITMASK);
+        image = graphicsConfiguration.createCompatibleVolatileImage(width, height, Transparency.BITMASK);
         g = (Graphics2D) image.getGraphics();
         g.setComposite(AlphaComposite.Src);
 
@@ -69,7 +69,7 @@ public class LevelRenderer
 
     private void updateArea(int x0, int y0, int w, int h)
     {
-        g.setBackground(transparent);
+        g.setBackground(translucent);
         g.clearRect(x0, y0, w, h);
         int xTileStart = (x0 + xCam) / 16;
         int yTileStart = (y0 + yCam) / 16;
@@ -82,7 +82,7 @@ public class LevelRenderer
                 int b = level.getBlock(x, y) & 0xff;
                 if (((Level.TILE_BEHAVIORS[b]) & Level.BIT_ANIMATED) == 0)
                 {
-                    g.drawImage(Art.level[b % 16][b / 16], (x << 4) - xCam, (y << 4) - yCam, null);
+                    g.drawImage(Art.level[b % 16][b / 16], (x << 4) - xCam, (y << 4) - yCam,translucent, null);
                 }
             }
         }
@@ -90,7 +90,7 @@ public class LevelRenderer
 
     public void render(Graphics g, int tick, float alpha)
     {
-        g.drawImage(image, 0, 0, null);
+        g.drawImage(image, 0, 0, translucent,null);
 
         for (int x = xCam / 16; x <= (xCam + width) / 16; x++)
             for (int y = yCam / 16; y <= (yCam + height) / 16; y++)
@@ -113,7 +113,7 @@ public class LevelRenderer
                     int yo = 0;
                     if (x >= 0 && y >= 0 && x < level.width && y < level.height) yo = level.data[x][y];
                     if (yo > 0) yo = (int) (Math.sin((yo - alpha) / 4.0f * Math.PI) * 8);
-                    g.drawImage(Art.level[(b % 16) / 4 * 4 + animTime][b / 16], (x << 4) - xCam, (y << 4) - yCam - yo, null);
+                    g.drawImage(Art.level[(b % 16) / 4 * 4 + animTime][b / 16], (x << 4) - xCam, (y << 4) - yCam - yo,translucent, null);
                 }
                 /*                else if (b == Level.TILE_BONUS)
                  {
@@ -187,13 +187,13 @@ public class LevelRenderer
     {
         for (int y = level.yExit - 8; y < level.yExit; y++)
         {
-            g.drawImage(Art.level[12][y == level.yExit - 8 ? 4 : 5], (level.xExit << 4) - xCam - 16, (y << 4) - yCam, null);
+            g.drawImage(Art.level[12][y == level.yExit - 8 ? 4 : 5], (level.xExit << 4) - xCam - 16, (y << 4) - yCam,translucent, null);
         }
         int yh = level.yExit * 16 - (int) ((Math.sin((tick + alpha) / 20) * 0.5 + 0.5) * 7 * 16) - 8;
         if (bar)
         {
-            g.drawImage(Art.level[12][3], (level.xExit << 4) - xCam - 16, yh - yCam, null);
-            g.drawImage(Art.level[13][3], (level.xExit << 4) - xCam, yh - yCam, null);
+            g.drawImage(Art.level[12][3], (level.xExit << 4) - xCam - 16, yh - yCam,translucent, null);
+            g.drawImage(Art.level[13][3], (level.xExit << 4) - xCam, yh - yCam,translucent, null);
         }
     }
 
@@ -202,7 +202,7 @@ public class LevelRenderer
     {
         for (int y = level.yExit - 8; y < level.yExit; y++)
         {
-            g.drawImage(Art.level[13][y == level.yExit - 8 ? 4 : 5], (level.xExit << 4) - xCam + 16, (y << 4) - yCam, null);
+            g.drawImage(Art.level[13][y == level.yExit - 8 ? 4 : 5], (level.xExit << 4) - xCam + 16, (y << 4) - yCam,translucent, null);
         }
     }
 }

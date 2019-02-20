@@ -31,6 +31,7 @@ public class LevelScene extends Scene implements SpriteContext
     private BgRenderer[] bgLayer = new BgRenderer[2];
 
     private GraphicsConfiguration graphicsConfiguration;
+    private Color translucent = new Color(0, 0, 0, 0);
 
     public boolean paused = false;
     public int startTime = 0;
@@ -486,7 +487,7 @@ public class LevelScene extends Scene implements SpriteContext
         char[] ch = text.toCharArray();
         for (int i = 0; i < ch.length; i++)
         {
-            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y, null);
+            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y,translucent, null);
         }
     }
     

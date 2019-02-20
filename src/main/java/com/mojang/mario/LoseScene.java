@@ -10,6 +10,7 @@ public class LoseScene extends Scene
     private MarioComponent component;
     private int tick;
     private String scrollMessage = "Game over!";
+    private Color translucent = new Color(0, 0, 0, 0);
     
     public LoseScene(MarioComponent component)
     {
@@ -26,7 +27,7 @@ public class LoseScene extends Scene
         g.fillRect(0, 0, 320, 240);
         int f = tick/3%10;
         if (f>=6) f = 10-f;
-        g.drawImage(Art.gameOver[f][0], 160-48, 100-32, null);
+        g.drawImage(Art.gameOver[f][0], 160-48, 100-32,translucent, null);
         drawString(g, scrollMessage, 160-scrollMessage.length()*4, 160, 0);
     }
 
@@ -35,7 +36,7 @@ public class LoseScene extends Scene
         char[] ch = text.toCharArray();
         for (int i = 0; i < ch.length; i++)
         {
-            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y, null);
+            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y,translucent, null);
         }
     }
 

@@ -10,6 +10,7 @@ public class WinScene extends Scene
     private MarioComponent component;
     private int tick;
     private String scrollMessage = "Thank you for saving me, Mario!";
+    private Color translucent = new Color(0, 0, 0, 0);
     
     public WinScene(MarioComponent component)
     {
@@ -24,7 +25,7 @@ public class WinScene extends Scene
     {
         g.setColor(Color.decode("#8080a0"));
         g.fillRect(0, 0, 320, 240);
-        g.drawImage(Art.endScene[tick/24%2][0], 160-48, 100-48, null);
+        g.drawImage(Art.endScene[tick/24%2][0], 160-48, 100-48,translucent, null);
         drawString(g, scrollMessage, 160-scrollMessage.length()*4, 160, 0);
     }
 
@@ -33,7 +34,7 @@ public class WinScene extends Scene
         char[] ch = text.toCharArray();
         for (int i = 0; i < ch.length; i++)
         {
-            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y, null);
+            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y,translucent, null);
         }
     }
 

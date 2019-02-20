@@ -5,6 +5,7 @@ import java.awt.Image;
 
 import com.mojang.mario.level.SpriteTemplate;
 import com.mojang.sonar.SoundSource;
+import java.awt.Color;
 
 public class Sprite implements SoundSource
 {
@@ -24,6 +25,8 @@ public class Sprite implements SoundSource
     public int layer = 1;
 
     public SpriteTemplate spriteTemplate;
+    private Color translucent = new Color(0, 0, 0, 0);
+    private Color opaque = new Color(0, 0, 0, 0.0f);
     
     public void move()
     {
@@ -38,6 +41,8 @@ public class Sprite implements SoundSource
         int xPixel = (int)(xOld+(x-xOld)*alpha)-xPicO;
         int yPixel = (int)(yOld+(y-yOld)*alpha)-yPicO;
 
+
+        
         og.drawImage(sheet[xPic][yPic], xPixel+(xFlipPic?wPic:0), yPixel+(yFlipPic?hPic:0), xFlipPic?-wPic:wPic, yFlipPic?-hPic:hPic, null);
     }
     

@@ -6,6 +6,7 @@ import java.awt.GraphicsConfiguration;
 import com.mojang.mario.level.BgLevelGenerator;
 import com.mojang.mario.level.LevelGenerator;
 import com.mojang.mario.sprites.Mario;
+import java.awt.Color;
 
 public class TitleScene extends Scene
 {
@@ -13,6 +14,7 @@ public class TitleScene extends Scene
     private int tick;
     private BgRenderer bgLayer0;
     private BgRenderer bgLayer1;
+    private Color translucent = new Color(0,0,0,0);
     
     public TitleScene(MarioComponent component, GraphicsConfiguration gc)
     {
@@ -35,8 +37,8 @@ public class TitleScene extends Scene
 //        g.setColor(Color.decode("#8080a0"));
 //        g.fillRect(0, 0, 320, 240);
         int yo = 16-Math.abs((int)(Math.sin((tick+alpha)/6.0)*8));
-        g.drawImage(Art.logo, 0, yo, null);
-        g.drawImage(Art.titleScreen, 0, 120, null);
+        g.drawImage(Art.logo, 0, yo, translucent,null);
+        g.drawImage(Art.titleScreen, 0, 120, translucent, null);
     }
 
     @SuppressWarnings("unused")
@@ -45,7 +47,7 @@ public class TitleScene extends Scene
         char[] ch = text.toCharArray();
         for (int i = 0; i < ch.length; i++)
         {
-            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y, null);
+            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y,translucent, null);
         }
     }
 

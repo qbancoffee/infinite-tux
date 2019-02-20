@@ -15,6 +15,7 @@ import javax.sound.midi.Sequencer;
 
 import com.mojang.sonar.SonarSoundEngine;
 import com.mojang.sonar.sample.SonarSample;
+import java.awt.Color;
 
 
 public class Art
@@ -54,6 +55,7 @@ public class Art
 
     private static Sequence[] songs = new Sequence[10];
     private static Sequencer sequencer;
+    private static Color translucent = new Color(0,0,0,0);
 
 
     public static void init(GraphicsConfiguration gc, SonarSoundEngine sound)
@@ -119,10 +121,10 @@ public class Art
     private static Image getImage(GraphicsConfiguration gc, String imageName) throws IOException
     {
         BufferedImage source = ImageIO.read(Art.class.getResourceAsStream(imageName));
-        Image image = gc.createCompatibleImage(source.getWidth(), source.getHeight(), Transparency.BITMASK);
+        Image image = gc.createCompatibleVolatileImage(source.getWidth(), source.getHeight(), Transparency.BITMASK);
         Graphics2D g = (Graphics2D) image.getGraphics();
         g.setComposite(AlphaComposite.Src);
-        g.drawImage(source, 0, 0, null);
+        g.drawImage(source, 0, 0,translucent, null);
         g.dispose();
         return image;
     }
@@ -135,10 +137,10 @@ public class Art
         {
             for (int y = 0; y < source.getHeight(null) / ySize; y++)
             {
-                Image image = gc.createCompatibleImage(xSize, ySize, Transparency.BITMASK);
+                Image image = gc.createCompatibleVolatileImage(xSize, ySize, Transparency.BITMASK);
                 Graphics2D g = (Graphics2D) image.getGraphics();
                 g.setComposite(AlphaComposite.Src);
-                g.drawImage(source, -x * xSize, -y * ySize, null);
+                g.drawImage(source, -x * xSize, -y * ySize,translucent, null);
                 g.dispose();
                 images[x][y] = image;
             }

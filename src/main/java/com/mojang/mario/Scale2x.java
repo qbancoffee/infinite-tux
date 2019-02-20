@@ -10,6 +10,7 @@
  */
 package com.mojang.mario;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
@@ -24,6 +25,7 @@ public class Scale2x
     private BufferedImage sourceImage;
     private int[] sourcePixels;
     private Graphics sourceGraphics;
+    private Color translucent = new Color(0, 0, 0, 0);
 
     private BufferedImage targetImage;
     private int[] targetPixels;
@@ -69,7 +71,7 @@ public class Scale2x
     {
         // Offset the image by one pixel so there's a border around it.
         // This lets us avoid having to check that A-I are in range of the image before samping them
-        sourceGraphics.drawImage(img, 1, 1, null);
+        sourceGraphics.drawImage(img, 1, 1,translucent, null);
 
         int line = width + 2;
         for (int y = 0; y < height; y++)

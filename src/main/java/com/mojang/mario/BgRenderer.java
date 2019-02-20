@@ -10,9 +10,9 @@ public class BgRenderer
     private int xCam;
     private int yCam;
     private Image image;
-    private Graphics2D g;
-    private static final Color transparent = new Color(0, 0, 0, 0);
+    private Graphics2D g;;
     private Level level;
+    private Color translucent = new Color(0,0,0,0);
 
     private Random random = new Random();
     public boolean renderBehaviors = false;
@@ -28,7 +28,8 @@ public class BgRenderer
         this.height = height;
 
         this.level = level;
-        image = graphicsConfiguration.createCompatibleImage(width, height, Transparency.BITMASK);
+        image = graphicsConfiguration.createCompatibleVolatileImage(width, height, Transparency.BITMASK);
+       
         g = (Graphics2D) image.getGraphics();
         g.setComposite(AlphaComposite.Src);
 
@@ -72,7 +73,7 @@ public class BgRenderer
 
     private void updateArea(int x0, int y0, int w, int h)
     {
-        g.setBackground(transparent);
+        g.setBackground(translucent);
         g.clearRect(x0, y0, w, h);
         int xTileStart = (x0 + xCam) / 32;
         int yTileStart = (y0 + yCam) / 32;
@@ -83,14 +84,14 @@ public class BgRenderer
             for (int y = yTileStart; y <= yTileEnd; y++)
             {
                 int b = level.getBlock(x, y) & 0xff;
-                g.drawImage(Art.bg[b % 8][b / 8], (x << 5) - xCam, (y << 5) - yCam-16, null);
+                g.drawImage(Art.bg[b % 8][b / 8], (x << 5) - xCam, (y << 5) - yCam-16,translucent, null);
             }
         }
     }
 
     public void render(Graphics g, int tick, float alpha)
     {
-        g.drawImage(image, 0, 0, null);
+        g.drawImage(image, 0, 0,translucent, null);
     }
 
     public void setLevel(Level level)

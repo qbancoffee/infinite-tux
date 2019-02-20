@@ -11,6 +11,7 @@ import com.mojang.mario.sprites.Mario;
 
 public class MapScene extends Scene
 {
+    private Color translucent = new Color(0, 0, 0, 0);
     private static final int TILE_GRASS = 0;
     private static final int TILE_WATER = 1;
     private static final int TILE_LEVEL = 2;
@@ -46,7 +47,7 @@ public class MapScene extends Scene
         this.seed = seed;
 
         random = new Random(seed);
-        staticBg = graphicsConfiguration.createCompatibleImage(320, 240, Transparency.BITMASK);
+        staticBg = graphicsConfiguration.createCompatibleVolatileImage(320, 240, Transparency.BITMASK);
         staticGr = staticBg.getGraphics();
     }
 
@@ -345,38 +346,38 @@ public class MapScene extends Scene
         {
             for (int y = 0; y < 240 / 16; y++)
             {
-                g.drawImage(map[worldNumber / 4][0], x * 16, y * 16, null);
+                g.drawImage(map[worldNumber / 4][0], x * 16, y * 16,translucent, null);
                 if (level[x][y] == TILE_LEVEL)
                 {
                     int type = data[x][y];
                     if (type == 0)
                     {
-                        g.drawImage(map[0][7], x * 16, y * 16, null);
+                        g.drawImage(map[0][7], x * 16, y * 16,translucent, null);
                     }
                     else if (type == -1)
                     {
-                        g.drawImage(map[3][8], x * 16, y * 16, null);
+                        g.drawImage(map[3][8], x * 16, y * 16,translucent, null);
                     }
                     else if (type == -3)
                     {
-                        g.drawImage(map[0][8], x * 16, y * 16, null);
+                        g.drawImage(map[0][8], x * 16, y * 16,translucent, null);
                     }
                     else if (type == -10)
                     {
-                        g.drawImage(map[1][8], x * 16, y * 16, null);
+                        g.drawImage(map[1][8], x * 16, y * 16,translucent, null);
                     }
                     else if (type == -11)
                     {
-                        g.drawImage(map[1][7], x * 16, y * 16, null);
+                        g.drawImage(map[1][7], x * 16, y * 16,translucent, null);
                     }
                     else if (type == -2)
                     {
-                        g.drawImage(map[2][7], x * 16, y * 16 - 16, null);
-                        g.drawImage(map[2][8], x * 16, y * 16, null);
+                        g.drawImage(map[2][7], x * 16, y * 16 - 16,translucent, null);
+                        g.drawImage(map[2][8], x * 16, y * 16,translucent, null);
                     }
                     else
                     {
-                        g.drawImage(map[type - 1][6], x * 16, y * 16, null);
+                        g.drawImage(map[type - 1][6], x * 16, y * 16,translucent, null);
                     }
                 }
                 else if (level[x][y] == TILE_ROAD)
@@ -386,7 +387,7 @@ public class MapScene extends Scene
                     int p2 = isRoad(x + 1, y) ? 1 : 0;
                     int p3 = isRoad(x, y + 1) ? 1 : 0;
                     int s = p0 + p1 * 2 + p2 * 4 + p3 * 8;
-                    g.drawImage(map[s][2], x * 16, y * 16, null);
+                    g.drawImage(map[s][2], x * 16, y * 16,translucent, null);
                 }
                 else if (level[x][y] == TILE_WATER)
                 {
@@ -401,7 +402,7 @@ public class MapScene extends Scene
                             int s = p0 + p1 * 2 + p2 * 4 + p3 * 8 - 1;
                             if (s >= 0 && s < 14)
                             {
-                                g.drawImage(map[s][4 + ((xx + yy) & 1)], x * 16 + xx * 8, y * 16 + yy * 8, null);
+                                g.drawImage(map[s][4 + ((xx + yy) & 1)], x * 16 + xx * 8, y * 16 + yy * 8,translucent, null);
                             }
                         }
                     }
@@ -413,7 +414,7 @@ public class MapScene extends Scene
     private DecimalFormat df = new DecimalFormat("00");
     public void render(Graphics g, float alpha)
     {
-        g.drawImage(staticBg, 0, 0, null);
+        g.drawImage(staticBg, 0, 0,translucent, null);
         Image[][] map = Art.map;
 
         for (int y = 0; y <= 240 / 16; y++)
@@ -424,34 +425,34 @@ public class MapScene extends Scene
                 {
                     if (isWater(x * 2 - 1, y * 2 - 1))
                     {
-                        g.drawImage(map[15][4 + (tick / 6 + y) % 4], x * 16 - 8, y * 16 - 8, null);
+                        g.drawImage(map[15][4 + (tick / 6 + y) % 4], x * 16 - 8, y * 16 - 8,translucent, null);
                     }
                 }
                 else if (level[x][y] == TILE_DECORATION)
                 {
-                    g.drawImage(map[(tick + y * 12) / 6 % 4][10 + worldNumber % 4], x * 16, y * 16, null);
+                    g.drawImage(map[(tick + y * 12) / 6 % 4][10 + worldNumber % 4], x * 16, y * 16,translucent, null);
                 }
                 else if (level[x][y] == TILE_LEVEL && data[x][y] == -2 && tick / 12 % 2 == 0)
                 {
-                    g.drawImage(map[3][7], x * 16 + 16, y * 16 - 16, null);
+                    g.drawImage(map[3][7], x * 16 + 16, y * 16 - 16,translucent, null);
                 }
             }
         }
         if (!Mario.large)
         {
-            g.drawImage(map[(tick) / 6 % 2][1], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6, null);
+            g.drawImage(map[(tick) / 6 % 2][1], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6,translucent, null);
         }
         else
         {
             if (!Mario.fire)
             {
-                g.drawImage(map[(tick) / 6 % 2+2][0], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6-16, null);
-                g.drawImage(map[(tick) / 6 % 2+2][1], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6, null);
+                g.drawImage(map[(tick) / 6 % 2+2][0], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6-16,translucent, null);
+                g.drawImage(map[(tick) / 6 % 2+2][1], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6,translucent, null);
             }
             else
             {
-                g.drawImage(map[(tick) / 6 % 2+4][0], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6-16, null);
-                g.drawImage(map[(tick) / 6 % 2+4][1], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6, null);
+                g.drawImage(map[(tick) / 6 % 2+4][0], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6-16,translucent, null);
+                g.drawImage(map[(tick) / 6 % 2+4][1], xMario + (int) (xMarioA * alpha), yMario + (int) (yMarioA * alpha) - 6,translucent, null);
             }
         }
         
@@ -472,7 +473,7 @@ public class MapScene extends Scene
         char[] ch = text.toCharArray();
         for (int i = 0; i < ch.length; i++)
         {
-            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y, null);
+            g.drawImage(Art.font[ch[i] - 32][c], x + i * 8, y,translucent, null);
         }
     }
 
