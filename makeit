@@ -10,7 +10,7 @@ fi
 mkdir infinitetux
 mkdir dist
 
-javac -source 1.6 -target 1.6 -d \
+javac -d \
 ./infinitetux ./src/main/java/com/mojang/mario/*.java \
 ./src/main/java/com/mojang/mario/level/*.java \
 ./src/main/java/com/mojang/mario/mapedit/*.java \
