@@ -15,6 +15,12 @@ Download executable
 https://github.com/qbancoffee/infinite-tux/releases
 
 <br>
+Gameplay Video
+--------------
+
+[![Gameplay Video](https://img.youtube.com/vi/51M4KL25qoM/0.jpg)](https://www.youtube.com/watch?v=51M4KL25qoM)
+
+<br>
 
 AI Gameplay Video
 --------------
@@ -23,12 +29,6 @@ AI Gameplay Video
 [![AI Gameplay Video over ground](https://img.youtube.com/vi/5RukWnRZ0yI/0.jpg)](https://www.youtube.com/watch?v=5RukWnRZ0yI)
 <br>
 
-Gameplay Video
---------------
-
-[![Gameplay Video](https://img.youtube.com/vi/51M4KL25qoM/0.jpg)](https://www.youtube.com/watch?v=51M4KL25qoM)
-
-<br>
 
 ScreenShots
 -----------
