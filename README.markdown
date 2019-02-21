@@ -85,7 +85,7 @@ Once installed, you can compile, package and run the resulting jar file.
 mvn compile
 mvn package
 cd target
-java -jar Mario-1.0-jar-with-dependencies.jar
+java -jar infinitetux-1.1-jar-with-dependencies.jar
 ```
 * With gnu make<br>
 If you don't have make installed, this worked for me.
