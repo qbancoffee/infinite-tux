@@ -6,13 +6,13 @@ Also added some scripts to help compile the game.
 
 Now it's completely open source!
 
-[Infinite Mario Bros](http://www.mojang.com/notch/mario/) source code has a bug in the timing, which prevents it working on Mac OS X, and maybe other platforms. This version uses the timing from the Mario AI competition, and is Mac-compatible.
+Make sure you have a Java version of at least 1.8.
 
 <br>
 
 Download executable
 ===================
-https://github.com/qbancoffee/infinite-tux/releases/tag/1.0
+https://github.com/qbancoffee/infinite-tux/releases
 
 <br>
 
@@ -52,15 +52,12 @@ ScreenShots
 
 Download executable
 ===================
-https://github.com/qbancoffee/infinite-tux/releases/tag/1.0
+https://github.com/qbancoffee/infinite-tux/releases
 
 
 Problems with OpenJDK on Ubuntu 14.04 and 16.04
 -----------------------------------------------
-Under Ubuntu 14.04 and 16.04 the graphics are not rendered correctly at the window edges when running the game with an OpenJDK from the
-Ubuntu repositories. However, everything works as it should when using a downloaded OpenJDK binary from https://openjdk.java.net or by installing the Oracle JRE even if compiled with OpenJDK<br>
-<br>
-This is not an issue with an OpenJDK from the Ubuntu 18.04 repositories.
+Latest version now works correctly with OpenJDK!
 
 Compiling and running
 ---------------------
