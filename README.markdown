@@ -15,6 +15,7 @@ Download executable
 https://github.com/qbancoffee/infinite-tux/releases
 
 <br>
+
 Gameplay Video
 --------------
 
