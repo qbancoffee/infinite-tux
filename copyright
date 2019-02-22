@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: infinitetux
-Source: https://github.com/cflewis/Infinite-Mario-Bros
+Source: https://github.com/qbancoffee/infinite-tux
 
 Files: *
 Copyright: Copyright 2018 qbancoffee <qbancoffee@yahoo.com>
