@@ -90,7 +90,7 @@ BUILDDEPENDS   = "gzip (>=1.5), debhelper (>=9), default-jre | \
 java8-runtime"
 
 # Package section
-DESCRIPTION    = " Slightly more compatible version of Infinite Mario."
+DESCRIPTION    = " A 2D platformer inspired by Infinite Mario."
 EXTDESCRIPTION = " Java based Mario Bros. clone that has had the artwork changed \
 with open source files. Tux is the main character instead of Mario"
 ARCH           = "all"
