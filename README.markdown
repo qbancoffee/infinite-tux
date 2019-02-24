@@ -216,6 +216,12 @@ chmod +x make_deb_package
 ./make_deb_package
 ```
 
+once the debian directory is created all you need to do every time you want to make a deb 
+package is run the following.
+```bash
+debuild -us -uc -I
+```
+
 If all goes well, this will produce an installable deb package on ubuntu and possibly other debian based systems.
 
 the deb file should be one level above the current directory.
