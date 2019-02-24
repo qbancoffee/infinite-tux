@@ -86,8 +86,7 @@ PRIORITY       = "optional"
 MAINTAINER     = "qbancoffee"
 EMAIL          = "qbancoffee@yahoo.com"
 STDVER         = "3.9.7"
-BUILDDEPENDS   = "gzip (>=1.5), debhelper (>=9), default-jre | \
-java8-runtime"
+BUILDDEPENDS   = "gzip (>=1.5), debhelper (>=9), openjdk-8-jre"
 
 # Package section
 DESCRIPTION    = " A 2D platformer inspired by Infinite Mario."
@@ -95,8 +94,7 @@ EXTDESCRIPTION = " Java based Mario Bros. clone that has had the artwork changed
 with open source files. Tux is the main character instead of Mario"
 ARCH           = "all"
 HOMEPAGE       = "https://github.com/qbancoffee/infinite-tux"
-DEPENDS        = "\$${misc:Depends}, jarwrapper, default-jre | \
-java7-runtime"
+DEPENDS        = "\$${misc:Depends}, jarwrapper, openjdk-8-jre"
 ##############MISC######################################################
 MAKEDEB        = 0
 

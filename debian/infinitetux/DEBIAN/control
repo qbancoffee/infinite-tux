@@ -3,7 +3,7 @@ Version: 1.0
 Architecture: all
 Maintainer: qbancoffee <qbancoffee@yahoo.com>
 Installed-Size: 1126
-Depends: jarwrapper, default-jre | java7-runtime
+Depends: jarwrapper, openjdk-8-jre
 Section: x11
 Priority: optional
 Homepage: https://github.com/qbancoffee/infinite-tux
