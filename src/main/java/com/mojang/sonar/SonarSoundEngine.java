@@ -34,7 +34,7 @@ public class SonarSoundEngine implements Runnable
         Mixer mixer = AudioSystem.getMixer(null);
 
         sdl = (SourceDataLine) mixer.getLine(new Line.Info(SourceDataLine.class));
-        sdl.open(new AudioFormat(rate, 16, 2, true, false), bufferSize * 2 * 2 * 2 * 2 * 2);
+        sdl.open(new AudioFormat(2*rate, 16, 1, true, false), bufferSize * 2 * 2 * 2 * 2 * 2);
         soundBuffer.order(ByteOrder.LITTLE_ENDIAN);
         sdl.start();
 
