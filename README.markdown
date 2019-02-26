@@ -19,7 +19,7 @@ https://github.com/qbancoffee/infinite-tux/releases
 Gameplay Video
 --------------
 
-[![Gameplay Video](https://img.youtube.com/vi/51M4KL25qoM/0.jpg)](https://www.youtube.com/watch?v=51M4KL25qoM)
+[![Gameplay Video](https://img.youtube.com/vi/CxtxaujNFws/0.jpg)](https://www.youtube.com/watch?v=CxtxaujNFws)
 
 <br>
 
