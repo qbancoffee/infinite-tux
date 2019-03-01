@@ -3,8 +3,25 @@ Upstream-Name: infinitetux
 Source: https://github.com/qbancoffee/infinite-tux
 
 Files: *
-Copyright: Copyright 2018 qbancoffee <qbancoffee@yahoo.com>
-License: GPL-3+
+Copyright: 2006, Markus Persson
+License: public-domain
+
+License: public-domain
+I'm releasing the source code for this project since I've gotten quite a 
+bit of email with really good suggestions on how to make this better,
+but I don't have the time to implement them myself.
+
+The code (/src/) is released as public domain, so you can do with it
+what you wish. The art (/res/) is still copyright nintendo, so it's
+almost certainly NOT ok to do anything at all with it. Ask nintendo.
+
+And, please, if you're going to make a bigger project out of this, please
+consider replacing the art with legal art. 
+
+https://web.archive.org/web/20120522161544/http://www.mojang.com/notch/mario/release.zip
+
+
+
 
 Files: debian/*
 Copyright: Copyright 2018 qbancoffee <qbancoffee@yahoo.com>
