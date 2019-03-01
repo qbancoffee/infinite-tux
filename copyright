@@ -2,30 +2,109 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: infinitetux
 Source: https://github.com/qbancoffee/infinite-tux
 
-Files: *
+Files: src/*
 Copyright: 2006, Markus Persson
 License: public-domain
-
+Comment: release.zip contains the source code and the license text.
+ this is the original source code that was later taken and modified
+ by Chris Lewis for the Mario AI competition allowing it to run on Macs.
 License: public-domain
-I'm releasing the source code for this project since I've gotten quite a 
-bit of email with really good suggestions on how to make this better,
-but I don't have the time to implement them myself.
+ The code (/src/) is released as public domain, so you can do with it
+ what you wish. The art (/res/) is still copyright nintendo, so it's
+ almost certainly NOT ok to do anything at all with it. Ask nintendo.
+ https://web.archive.org/web/20120522161544/http://www.mojang.com/notch/mario/release.zip
 
-The code (/src/) is released as public domain, so you can do with it
-what you wish. The art (/res/) is still copyright nintendo, so it's
-almost certainly NOT ok to do anything at all with it. Ask nintendo.
-
-And, please, if you're going to make a bigger project out of this, please
-consider replacing the art with legal art. 
-
-https://web.archive.org/web/20120522161544/http://www.mojang.com/notch/mario/release.zip
-
-
-
-
-Files: debian/*
-Copyright: Copyright 2018 qbancoffee <qbancoffee@yahoo.com>
+Files: src/main/java/*
+Copyright: 2009, Chris Lewis
+License: BSD-3-Clause
+Comment: links to the source and a license by Chris Lewis.
+ https://github.com/cflewis/Infinite-Mario-Bros
+ https://web.archive.org/web/20190124193351/https://github.com/cflewis/Infinite-Mario-Bros/blob/master/LICENSE.txt
+ Infinite Mario Bros. is the source used for infintetux.
+ The code was "mavenized" by Chris Lewis. the "com" directory was moved
+ and the assets directory was moved and renamed to from "res" to
+ "resources". The structure is now "src/main/java/com" instead of
+ "src/com" The assets are now in "src/main/resources"
+ 
+Files: src/main/java/*
+Copyright: 2018, Pedro Pena <qbancoffee@yahoo.com>
 License: GPL-3+
+Comment: As far as I can tell, the public domain license and the
+ BSD-3-Clause license are permissive and allow the source to be
+ relicensed as GPL-3+.
+ https://www.gnu.org/licenses/license-list.en.html#ModifiedBSD
+ https://web.archive.org/web/20180622102936/https://janelia-flyem.github.io/licenses.html
+ 
+Files: src/main/resources/snd/death.wav
+Copyright: 2018, Kim Lighyear
+License: public-domain
+Comment: death.wav replaced with KL%20Peach%20Game%20Over%20III.wav
+ https://opengameart.org/content/kl-peach-game-over-iii
+
+Files: /main/resources/snd/powerup.wav /main/resources/snd/powerdown.wav
+Copyright: 2018, Quitschie
+License: public-domain
+Comment: powerup.wav & powerdown.wav replaced with Power Up.wav
+ https://opengameart.org/content/power-up-level-up-beansjam
+ 
+Files: bump.wav stomp.wav kick.wav sprout.wav coin.wav
+Copyright: 2016, Juhani Junkala <juhani.junkala@musician.org>
+License: public-domain
+Comment: these files are located in src/main/resources/snd
+ link to source files
+ https://opengameart.org/content/512-sound-effects-8-bit-style
+ bump.wav replaced with sfx_sounds_impact1.wav
+ stomp.wav replaced with sfx_alarm_loop6.wav
+ kick.wav replaced with sfx_movement_ladder1loop.wav
+ sprout.wav replaced with sfx_sound_neutral7.wav
+ coin.wav replaced by sfx_coin_double1.wav
+
+Files: src/main/resources/sndbreakblock.wav
+Copyright: 2018, rubberduck
+License: public-domain
+Comment: breakblock.wav replaced with synth_misc_08.ogg
+ https://opengameart.org/content/50-cc0-retro-synth-sfx
+ 
+License: BSD-3-Clause
+ Redistribution and use in source and binary forms, with or without 
+ modification, are permitted provided that the following conditions are 
+ met:
+ .
+ 1. Redistributions of source code must retain the above copyright 
+ notice, this list of conditions and the following disclaimer.
+ .
+ 2. Redistributions in binary form must reproduce the above copyright 
+ notice, this list of conditions and the following disclaimer in the 
+ documentation and/or other materials provided with the distribution.
+ .
+ 3. Neither the name of the copyright holder nor the names of its 
+ contributors may be used to endorse or promote products derived from 
+ this software without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
+ "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+ PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+ HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+ TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+ LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: bgsheet.png enemysheet.png firemariosheet.png font.gif
+ gameovergost.gif itemsheet.png logo.gif mapsheet.png
+ mariosheet.png particlesheet.png smallmariosheet.png
+ title.gif worldmap.png
+Copyright: Copyright 2018 Pedro Pena <qbancoffee@yahoo.com>
+License: GPL-3+
+Comment: The listed files are all located in src/main/resources
+ These are the original filenames used when Infinte Mario Bros. was 
+ created. The names were kept and the sprites drawn in the same pixel
+ positions in order not to modify the games source code. Part of the 
+ reason for this is to be able to take Infinite Mario Bros. variants
+ and legalize them by replacing the Nintendo assets with these.
 
 License: GPL-3+
  This program is free software: you can redistribute it and/or modify
@@ -46,3 +125,179 @@ License: GPL-3+
  On Debian systems, the full text of the GNU General Public
  License version 3 can be found in the file
  `/usr/share/common-licenses/GPL-3'.
+
+Files: src/main/resources/endscene.gif
+Copyright: Copyright 2018 Pedro Pena <qbancoffee@yahoo.com>
+License: CC-BY-NC-4.0
+Comment: Modified by Pedro Pena link to source provided.
+  http://pngimg.com/uploads/linux/linux_PNG43.png
+
+License: CC-BY-NC-4.0
+ Creative Commons Corporation ("Creative Commons") is not a law firm and
+ does not provide legal services or legal advice. Distribution of
+ Creative Commons public licenses does not create a lawyer-client or
+ other relationship. Creative Commons makes its licenses and related
+ information available on an "as-is" basis. Creative Commons gives no
+ warranties regarding its licenses, any material licensed under their
+ terms and conditions, or any related information. Creative Commons
+ disclaims all liability for damages resulting from their use to the
+ fullest extent possible.
+ .
+ Using Creative Commons Public Licenses
+ .
+ Creative Commons public licenses provide a standard set of terms and
+ conditions that creators and other rights holders may use to share
+ original works of authorship and other material subject to copyright
+ and certain other rights specified in the public license below. The
+ following considerations are for informational purposes only, are not
+ exhaustive, and do not form part of our licenses.
+ .
+ Considerations for licensors: Our public licenses are
+ intended for use by those authorized to give the public
+ permission to use material in ways otherwise restricted by
+ copyright and certain other rights. Our licenses are
+ irrevocable. Licensors should read and understand the terms
+ and conditions of the license they choose before applying it.
+ Licensors should also secure all rights necessary before
+ applying our licenses so that the public can reuse the
+ material as expected. Licensors should clearly mark any
+ material not subject to the license. This includes other CC-
+ licensed material, or material used under an exception or
+ limitation to copyright. More considerations for licensors:
+ wiki.creativecommons.org/Considerations_for_licensors
+ .
+ Considerations for the public: By using one of our public
+ licenses, a licensor grants the public permission to use the
+ licensed material under specified terms and conditions. If
+ the licensor's permission is not necessary for any reason--for
+ example, because of any applicable exception or limitation to
+ copyright--then that use is not regulated by the license. Our
+ licenses grant only permissions under copyright and certain
+ other rights that a licensor has authority to grant. Use of
+ the licensed material may still be restricted for other
+ reasons, including because others have copyright or other
+ rights in the material. A licensor may make special requests,
+ such as asking that all changes be marked or described.
+ Although not required by our licenses, you are encouraged to
+ respect those requests where reasonable. More considerations
+ for the public: 
+ wiki.creativecommons.org/Considerations_for_licensees
+
+Files: src/main/resources/snd/lowtime.wav
+Copyright: 2016, Cleyton Kauffman
+License: OGA-BY-3.0
+Comment: lowtime.wav use SuperHero_original.ogg
+ source can be downloaded at
+ https://opengameart.org/content/adventure-theme
+
+Files: src/main/resources/snd/exit.wav
+Copyright: 2013, Jan125
+License: OGA-BY-3.0
+Comment: smwovr1.mid replaced with finished.mid
+ https://opengameart.org/content/stereotypical-90s-space-shooter-music
+ According to opengameart
+ OGA-BY 3.0 explicitly allows content to be relicensed under CC-BY 3.0.
+ Just change the license to CC-BY 3.0.  No need to get explicit
+ permission to do this, as the license already allows it.
+ https://opengameart.org/content/oga-by-30-faq
+
+License: OGA-BY-3.0
+ OPENGAMEART.ORG IS NOT A LAW FIRM AND DOES NOT PROVIDE LEGAL SERVICES.
+ DISTRIBUTION OF THIS LICENSE DOES NOT CREATE AN ATTORNEY-CLIENT
+ RELATIONSHIP. OPENGAMEART.ORG PROVIDES THIS INFORMATION ON AN "AS-IS"
+ BASIS. OPENGAMEART.ORG MAKES NO WARRANTIES REGARDING THE INFORMATION
+ PROVIDED, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM ITS USE. 
+ .
+ License
+ THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS
+ OPENGAMEART.ORG PUBLIC LICENSE ("OGAPL" OR "LICENSE"). THE WORK IS
+ PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK
+ OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS
+ PROHIBITED.
+ .
+ BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HERE, YOU ACCEPT AND
+ AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. TO THE EXTENT THIS
+ LICENSE MAY BE CONSIDERED TO BE A CONTRACT, THE LICENSOR GRANTS YOU THE
+ RIGHTS CONTAINED HERE IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS
+ AND CONDITIONS.
+ Full license:
+ http://static.opengameart.org/OGA-BY-3.0.txt
+ 
+
+ 
+Files: src/main/resources/snd/1-up.wav
+Copyright: Bastian Zapf
+License: GPL
+Comment: 1-up.wav replaced with fire-flower.wav from the supertux
+ inventory of sounds. This is all I can find on this file but I assume
+ it's o.k. because supertux is already in debian.
+ http://supertux.lethargik.org/wiki/DataFiles
+
+Files: src/main/resources/snd/jump.wav
+Copyright: wantsi
+License: GPLV2 or CC-BY-SA
+Comment: from the supertux inventory of sounds. This is all I can find
+ on this file but I assume it's o.k. because supertux is already in debian.
+ http://supertux.lethargik.org/wiki/DataFiles
+ There is a line that states the folloeing.
+ "All files in data/music created by wansti and licensed under
+ GPLv2+CC-by-sa, unless stated otherwise". wantsi is the same author for
+ jump.wav so I'm hoping this applies as well.
+
+Files: src/main/resources/snd/cannon.wav
+Copyright: 2007, Sommer
+License: GPLV2 or CC-BY-SA
+Comment: cannon.wav replaced with explosion.wav
+ from the supertux inventory of sounds. This is all I can find
+ on this file but I assume it's o.k. because supertux is already in debian.
+ https://supertux.lethargik.org/wiki/DataFiles
+
+Files: src/main/resources/snd/fireball.wav
+Copyright: Nathan McCoy
+License: unknown
+Comment: fireball.wav replaced with shoot.wav
+ from the supertux inventory of sounds. This is all I can find
+ on this file but I assume it's o.k. because supertux is already in debian.
+ https://supertux.lethargik.org/wiki/DataFiles
+
+Files: smb3map1.mid smwfortress.mid
+Copyright: 2013, Jan125
+License: CC-BY-3.0
+Comment: smb3map1.mid replaced with 2.mid
+ smwfortress.mid replaced with 1.mid
+ https://opengameart.org/content/some-kind-of-aceattorney-ish-music-thingie
+
+Files: src/main/resources/mus/smwovr1.mid
+Copyright: 2016, nene
+License: public-domain
+Comment: smwovr1.mid replaced with Long Away Home.mid
+ https://opengameart.org/content/long-away-home-8bit
+
+Files: src/main/resources/mus/smb3undr.mid
+Copyright: 2018, Wolfgang
+License: public-domain
+Comment: smb3undr.mid replaced with ChaseMidi.mid
+ https://opengameart.org/content/chase
+
+Files: src/main/resources/mus/smwtitle.mid
+Copyright: 2016, Fredrik Johansson
+License: CC-BY-SA-4.0
+Comment: smwtitle.mid replaced with archvile.mid
+ https://github.com/fredrik-johansson/midi
+ http://fredrikj.net
+
+
+
+
+Files: debian/* 
+Copyright: Copyright 2018 qbancoffee <qbancoffee@yahoo.com>
+License: GPL-3+
+
+
+
+
+
+Files:
+Copyright:
+License:
+Comment:
