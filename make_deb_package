@@ -1,3 +1,0 @@
-#!/bin/bash
-make deb DESTDIR=debian/infinitetux
-debuild -us -uc -I

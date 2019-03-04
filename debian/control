@@ -2,12 +2,14 @@ Source: infinitetux
 Section: x11
 Priority: optional
 Maintainer: qbancoffee <qbancoffee@yahoo.com>
-Standards-Version: 3.9.7
-Build-Depends: gzip (>=1.5), debhelper (>=9), openjdk-8-jre
+Standards-Version: 4.3.0
+Build-Depends: debhelper (>=9), default-jdk, javahelper
 
 Package: infinitetux
-Description:  A 2D platformer inspired by Infinite Mario.
- Java based Mario Bros. clone that has had the artwork changed with open source files. Tux is the main character instead of Mario
+Description: Infinite Tux is a 2D platformer game inspired by Infinite\
+ Mario. The game is procedurally generated every time it is replayed so\
+ you always play a different game. The game Infinite Mario was taken\
+ and all of the proprietary assets were repalced with open source
 Architecture: all
 Homepage: https://github.com/qbancoffee/infinite-tux
-Depends: ${misc:Depends}, jarwrapper, openjdk-8-jre
+Depends: ${misc:Depends}, jarwrapper, default-jre | java8-runtime

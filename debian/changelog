@@ -1,9 +1,9 @@
 infinitetux (1.0ubuntu1) UNRELEASED; urgency=medium
 
-  * sound effects are now mono instead of audio. this removes sound glitches that
-occassionally pop up 
+  * sound effects are now mono instead of audio. this removes sound \
+  glitches that occassionally pop up 
 
- -- Pedro Pena <pedro.pena@noaa.gov>  Mon, 25 Feb 2019 21:36:39 -0500
+ -- qbancoffee <qbancoffee@yahoo.com>  Mon, 25 Feb 2019 21:36:39 -0500
 
 infinitetux (1.0) unstable; urgency=medium
 
