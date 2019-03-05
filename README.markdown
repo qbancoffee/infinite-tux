@@ -88,18 +88,7 @@ mvn package
 cd target
 java -jar infinitetux-1.1-jar-with-dependencies.jar
 ```
-* With gnu make<br>
-If you don't have make installed, this worked for me.
 
-```bash
-sudo apt-get install make
-```
-Once installed, you can compile, package and run the resulting jar file.
-
-```bash
-make
-make run
-```
 You could also start the game by running a starter script created in the dist folder.
 
 ```bash
@@ -114,19 +103,6 @@ or you could run it full screen
 ```
 to exit just hit escape.<br>
 
-If you want to install the game.
-```bash
-sudo make install
-```
-This should install the game allowing you to start the game by clicking on its icon.<br>
-You could open a terminal and start the game from the terminal.
-```bash
-infinitetux
-```
-or 
-```bash
-infinitetux f
-```
 
 or
 
@@ -209,14 +185,7 @@ If you don't have these installed, this worked for me.
 sudo apt-get install devscripts debhelper jarwrapper
 ```
 
-Once installed, make the "make_deb_package" script executable and run it.
-
-```bash
-chmod +x make_deb_package
-./make_deb_package
-```
-
-once the debian directory is created all you need to do every time you want to make a deb 
+once the debian directory is created all you need to do every time you want to make an unsigned deb 
 package is run the following.
 ```bash
 debuild -us -uc -I
@@ -226,10 +195,10 @@ If all goes well, this will produce an installable deb package on ubuntu and pos
 
 the deb file should be one level above the current directory.
 
-../infinitetux_1.0_all.deb
+../infinitetux_1.1_all.deb
 
 Install
 ```bash
-sudo dpkg -i infinitetux_1.0_all.deb
+sudo dpkg -i infinitetux_1.1_all.deb
 ```
 
