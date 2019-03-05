@@ -37,7 +37,6 @@ Files: src/main/java/*
        manifest.txt
        replacing_sprites_and_credits.txt
        README.markdown
-       infinitetux.jar
        icon.png
        infinitetux.6
        infinitetux.desktop
@@ -91,8 +90,8 @@ Comment:
  death.wav replaced with KL%20Peach%20Game%20Over%20III.wav
  https://opengameart.org/content/kl-peach-game-over-iii
 
-Files: /main/resources/snd/powerup.wav
-       /main/resources/snd/powerdown.wav
+Files: src/main/resources/snd/powerup.wav
+       src/main/resources/snd/powerdown.wav
 Copyright: 2018, Quitschie
 License: CC0
 Comment:
@@ -115,7 +114,7 @@ Comment:
  sprout.wav replaced with sfx_sound_neutral7.wav
  coin.wav replaced by sfx_coin_double1.wav
 
-Files: src/main/resources/sndbreakblock.wav
+Files: src/main/resources/snd/breakblock.wav
 Copyright: 2018, rubberduck
 License: CC0
 Comment:
@@ -180,7 +179,8 @@ Comment:
  https://opengameart.org/content/8-bit-sound-effects-library
  
 
-Files: smb3map1.mid smwfortress.mid
+Files: src/main/resources/mus/smb3map1.mid 
+       src/main/resources/mus/smwfortress.mid
 Copyright: 2013, Jan125
 License: CC-BY-3.0
 Comment:

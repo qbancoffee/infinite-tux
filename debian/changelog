@@ -1,7 +1,12 @@
 infinitetux (1.0ubuntu1) UNRELEASED; urgency=medium
 
+  [ qbancoffee ]
   * sound effects are now mono instead of audio. this removes sound \
-  glitches that occasionally pop up 
+  glitches that occasionally pop up
+
+  removed git directory in order to stop lintian warnings.  \
+  [ Pedro Pena ]
+  *
 
  -- qbancoffee <qbancoffee@yahoo.com>  Mon, 25 Feb 2019 21:36:39 -0500
 
