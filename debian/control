@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: qbancoffee <qbancoffee@yahoo.com>
 Standards-Version: 4.3.0
 Build-Depends: debhelper (>=10), default-jdk, javahelper
+Homepage: https://github.com/qbancoffee/infinite-tux
 
 Package: infinitetux
 Description: Infinite Tux is a 2D platformer game inspired by Infinite\

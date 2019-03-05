@@ -1,4 +1,4 @@
-infinitetux (1.0ubuntu1) UNRELEASED; urgency=medium
+infinitetux (1.1) unstable; urgency=medium
 
   [ qbancoffee ]
   * sound effects are now mono instead of audio. this removes sound \
