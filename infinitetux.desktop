@@ -1,9 +1,11 @@
 [Desktop Entry]
-Comment=Infinite Tux.
+StartupNotify=false
 Terminal=false
-Name=Infinite Tux.
-Exec=/usr/bin/infinitetux
+Name=Infinitetux.
+Exec=infinitetux
 Type=Application
-Icon=/usr/share/doc/infinitetux/icon.png
+Icon=infinitetux
 NoDisplay=false
-Categories=Game
+Categories=Game;ArcadeGame;
+Keywords=game;arcade;platform;
+Comment=2D platformer game inspired by Infinite Mario
