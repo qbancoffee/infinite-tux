@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: qbancoffee <qbancoffee@yahoo.com>
 Standards-Version: 4.3.0
 Build-Depends:
- debhelper (>=10),
+ debhelper (>=12),
  default-jdk,
  javahelper
 Homepage: https://github.com/qbancoffee/infinite-tux
