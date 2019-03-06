@@ -17,7 +17,6 @@ License: public-domain
  https://web.archive.org/web/20120522161544/http://www.mojang.com/notch/mario/release.zip
 
 Files: src/main/java/*
-       pom.xml
 Copyright: 2009, Chris Lewis
 License: BSD-3-Clause
 Comment:
