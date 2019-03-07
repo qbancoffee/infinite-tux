@@ -39,6 +39,7 @@ Files: src/main/java/*
        infinitetux.png
        infinitetux.6
        infinitetux.desktop
+       infinitetux-data.appdata.xml
 Copyright: 2018, Pedro Pena <qbancoffee@yahoo.com>
 License: GPL-3+
 Comment:
