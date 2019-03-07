@@ -34,17 +34,17 @@ AI Gameplay Video
 ScreenShots
 -----------
 
-![Infinite Tux Title Screen](/screenshots/tux_title.png?raw=true "Infinite Tux Title Screen")
+![Infinite Tux Title Screen](/deb/screenshots/tux_title.png?raw=true "Infinite Tux Title Screen")
 
-![Infinite Tux World Map](/screenshots/tux_map.png?raw=true "Infinite Tux World Map")
+![Infinite Tux World Map](/deb/screenshots/tux_map.png?raw=true "Infinite Tux World Map")
 
-![Infinite Tux Above Ground 1](/screenshots/tux_jump_shark.png?raw=true "Infinite Tux Above Ground 1")
+![Infinite Tux Above Ground 1](/deb/screenshots/tux_jump_shark.png?raw=true "Infinite Tux Above Ground 1")
 
-![Infinite Tux Above Ground 2](/screenshots/tux_fire_shark.png?raw=true "Infinite Tux Above Ground 2")
+![Infinite Tux Above Ground 2](/deb/screenshots/tux_fire_shark.png?raw=true "Infinite Tux Above Ground 2")
 
-![Infinite Tux Dungeon](/screenshots/tux_dungeon_jump.png?raw=true "Infinite Tux Dungeon")
+![Infinite Tux Dungeon](/deb/screenshots/tux_dungeon_jump.png?raw=true "Infinite Tux Dungeon")
 
-![Infinite Tux Castle](/screenshots/tux_castle_cannon.png?raw=true "Infinite Tux Castle")
+![Infinite Tux Castle](/deb/screenshots/tux_castle_cannon.png?raw=true "Infinite Tux Castle")
 
 
 
