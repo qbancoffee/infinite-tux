@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2018 Pedro Pena <qbancoffee@yahoo.com> -->
-​<component type="desktop-application">
+​<component type="desktop">
   <id>infinitetux.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
@@ -27,24 +27,38 @@
   </description>
   <launchable type="desktop-id">infinitetux.desktop</launchable>
   <screenshots>
+
     <screenshot type="default">
       <image>https://libregamewiki.org/images/c/c0/InfiniteTux.png</image>
       <caption>Tux de-hatching and jumping off of a chick egg.</caption>
     </screenshot>
+
     <screenshot>
       <image>https://libregamewiki.org/images/8/86/Infinitetux_title.png</image>
        <caption>Title Page</caption>
     </screenshot>
+
         <screenshot>
       <image>https://libregamewiki.org/images/c/ca/Tux_castle_cannon.png</image>
       <caption>Tux standing between two two-headed fire breathing dragons</caption>
     </screenshot>
+
         <screenshot>
       <image>https://libregamewiki.org/images/4/4b/Tux_map.png</image>
       <caption>World Map of the levels to be played.</caption>
-    </screenshot>    
+    </screenshot>  
+  
   </screenshots>
   <url type="homepage">https://github.com/qbancoffee/infinite-tux</url>
   <url type="bugtracker">https://github.com/qbancoffee/infinite-tux/issues</url>
-    <content_rating type="oars-1.1" />
+    <content_rating type="oars-1.1">
+   </content_rating>
+<releases>
+    <release version="1.1" date="2019-03-07">
+       <description>
+          <p>Initial release</p>
+       </description>
+    </release>
+
+</releases>
 </component>

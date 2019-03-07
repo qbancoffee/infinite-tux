@@ -39,7 +39,6 @@ Files: src/main/java/*
        infinitetux.png
        infinitetux.6
        infinitetux.desktop
-       infinitetux-data.appdata.xml
 Copyright: 2018, Pedro Pena <qbancoffee@yahoo.com>
 License: GPL-3+
 Comment:
@@ -48,6 +47,10 @@ Comment:
  relicensed as GPL-3+.
  https://www.gnu.org/licenses/license-list.en.html#ModifiedBSD
  https://web.archive.org/web/20180622102936/https://janelia-flyem.github.io/licenses.html
+
+Files: infinitetux-appdata.xml
+Copyright: 2019, Pedro Pena <qbancoffee@yahoo.com>
+License: CC0
 
 Files: src/main/resources/bgsheet.png
        src/main/resources/enemysheet.png
