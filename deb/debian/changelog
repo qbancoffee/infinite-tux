@@ -1,17 +1,5 @@
 infinitetux (1.1) unstable; urgency=medium
 
-  [ qbancoffee ]
-  * sound effects are now mono instead of audio. this removes sound \
-  glitches that occasionally pop up
-
-  removed git directory in order to stop lintian warnings.  \
-  [ Pedro Pena ]
-  *
-
- -- qbancoffee <qbancoffee@yahoo.com>  Mon, 25 Feb 2019 21:36:39 -0500
-
-infinitetux (1.0) unstable; urgency=medium
-
-  * nothing done
+  * Initial release. (Closes: #923180)
 
  -- qbancoffee <qbancoffee@yahoo.com>  Thu, 27 Dec 2018 10:31:26 +0000
