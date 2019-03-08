@@ -11,10 +11,16 @@ Homepage: https://github.com/qbancoffee/infinite-tux
 
 Package: infinitetux
 Description: 2D platformer game inspired by Infinite Mario
- Infinite Tux is a 2D platformer game inspired by Infinite
- Mario. The game is procedurally generated every time it is replayed so
- you always play a different game. The game Infinite Mario was taken
- and all of the proprietary assets were repalced with open source
+ Infinite Tux is a 2D platformer game inspired by Infinite Mario.
+ The game is procedurally generated every time it is replayed, so
+ you always play a different game.
+ You can break blocks, run fast, collect coins and get one-ups.
+ Run through the levels stepping on enemies and spitting colorful
+ spit balls to kill them. Carry de-hatched chick eggs and launch
+ them towards other enemies to kill them too!
+ Infinite Tux recreates the feel of those fun 1980's platformer games
+ that kept people sitting in front of their CRT television sets for
+ hours on end. Have fun and enjoy this 8 bit retro style game!
 Architecture: all
 Depends:
  default-jre | java8-runtime,

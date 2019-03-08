@@ -1,4 +1,4 @@
 ../infinitetux.jar usr/share/infinitetux
-infinitetux-appdata.xml usr/share/metainfo
+infinitetux.appdata.xml usr/share/metainfo
 infinitetux.desktop usr/share/applications
 infinitetux.png usr/share/icons/hicolor/256x256/apps

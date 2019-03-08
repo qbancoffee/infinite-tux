@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Pedro Pena <qbancoffee@yahoo.com> -->
+<component type="desktop-application">>
+  <id>infinitetux.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>infinitetux</name>
+  <summary>2D platformer game inspired by Infinite Mario</summary>
+  <description>
+    <p>
+      Infinite Tux is a 2D platformer game inspired by Infinite Mario.
+      The game is procedurally generated every time it is replayed, so
+      you always play a different game.
+    </p>
+    <p>
+      You can break blocks, run fast, collect coins and get one-ups.
+      Run through the levels stepping on enemies and spitting colorful
+      spit balls to kill them. Carry de-hatched chick eggs and launch
+      them towards other enemies to kill them too!
+    </p>    
+    <p>
+      Infinite Tux recreates the feel of those fun 1980's platformer games
+      that kept people sitting in front of their CRT television sets for
+      hours on end.
+      Have fun and enjoy this 8 bit retro style game!
+    </p>
+  </description>
+  <launchable type="desktop-id">infinitetux.desktop</launchable>
+  <screenshots>
+
+    <screenshot type="default">
+      <image>https://libregamewiki.org/images/c/c0/InfiniteTux.png</image>
+      <caption>Tux de-hatching and jumping off of a chick egg.</caption>
+    </screenshot>
+
+    <screenshot>
+      <image>https://libregamewiki.org/images/8/86/Infinitetux_title.png</image>
+       <caption>Title Page</caption>
+    </screenshot>
+
+        <screenshot>
+      <image>https://libregamewiki.org/images/c/ca/Tux_castle_cannon.png</image>
+      <caption>Tux standing between two two-headed fire breathing dragons</caption>
+    </screenshot>
+
+        <screenshot>
+      <image>https://libregamewiki.org/images/4/4b/Tux_map.png</image>
+      <caption>World Map of the levels to be played.</caption>
+    </screenshot>  
+  
+  </screenshots>
+	<provides>
+		<id>infinitetux.desktop</id>
+	</provides>
+  <url type="homepage">https://github.com/qbancoffee/infinite-tux</url>
+  <url type="bugtracker">https://github.com/qbancoffee/infinite-tux/issues</url>
+    <content_rating type="oars-1.1">
+   </content_rating>
+<releases>
+    <release version="1.1" date="2019-03-07">
+       <description>
+          <p>Initial release</p>
+       </description>
+    </release>
+
+</releases>
+</component>
