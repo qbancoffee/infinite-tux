@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mojang.mario</groupId>
+    <artifactId>infinitetux</artifactId>
+    <name>Infinite Tux</name>
+    <version>1.1</version>
+    <description>Infinite Mario with all of the assets replaced with free and
+        open assets. </description>
+    <properties>
+        <src.dir>deb/src/main/java</src.dir>
+    </properties>
+    <build>
+        <sourceDirectory>${src.dir}</sourceDirectory>
+   <resources>
+     <resource>
+       <directory>deb/src/main/resources</directory>
+     </resource>
+   </resources>        
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2-beta-5</version>
+                <executions>
+                    <execution>
+                        <id>create-executable-jar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptorRefs>
+                                <descriptorRef>
+                                    jar-with-dependencies
+                                </descriptorRef>
+                            </descriptorRefs>
+                            <archive>
+                                <manifest>
+                                    <mainClass>com.mojang.mario.FullScreenFrameLauncher</mainClass>
+                                </manifest>
+                            </archive>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <profiles>
+        <profile>
+            <id>development</id>
+            <properties>
+                <src.dir>${project.build.directory}/new-src</src.dir>
+            </properties>
+        </profile>
+    </profiles> 
+</project>
