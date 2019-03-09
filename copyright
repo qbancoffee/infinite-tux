@@ -2,6 +2,29 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: infinitetux
 Source: https://github.com/qbancoffee/infinite-tux
 
+
+Files: src/main/resources/bgsheet.png
+       src/main/resources/enemysheet.png
+       src/main/resources/firemariosheet.png
+       src/main/resources/font.gif
+       src/main/resources/gameovergost.gif
+       src/main/resources/itemsheet.png
+       src/main/resources/logo.gif
+       src/main/resources/mapsheet.png
+       src/main/resources/mariosheet.png
+       src/main/resources/particlesheet.png
+       src/main/resources/smallmariosheet.png
+       src/main/resources/title.gif
+       src/main/resources/worldmap.png
+Copyright: 2018, Pedro Pena <qbancoffee@yahoo.com>
+License: GPL-3+
+Comment:
+ These are the original filenames used when Infinte Mario Bros. was
+ created. The names were kept and the sprites drawn in the same pixel
+ positions in order not to modify the games source code. Part of the
+ reason for this is to be able to take Infinite Mario Bros. variants
+ and legalize them by replacing the Nintendo assets with these.
+
 Files: src/*
 Copyright: 2006, Markus Persson
 License: public-domain
@@ -51,28 +74,6 @@ Comment:
 Files: infinitetux.appdata.xml
 Copyright: 2019, Pedro Pena <qbancoffee@yahoo.com>
 License: CC0
-
-Files: src/main/resources/bgsheet.png
-       src/main/resources/enemysheet.png
-       src/main/resources/firemariosheet.png
-       src/main/resources/font.gif
-       src/main/resources/gameovergost.gif
-       src/main/resources/itemsheet.png
-       src/main/resources/logo.gif
-       src/main/resources/mapsheet.png
-       src/main/resources/mariosheet.png
-       src/main/resources/particlesheet.png
-       src/main/resources/smallmariosheet.png
-       src/main/resources/title.gif
-       src/main/resources/worldmap.png
-Copyright: 2018, Pedro Pena <qbancoffee@yahoo.com>
-License: GPL-3+
-Comment:
- These are the original filenames used when Infinte Mario Bros. was
- created. The names were kept and the sprites drawn in the same pixel
- positions in order not to modify the games source code. Part of the
- reason for this is to be able to take Infinite Mario Bros. variants
- and legalize them by replacing the Nintendo assets with these.
 
 Files: src/main/resources/endscene.gif
 Copyright: 2018, Pedro Pena <qbancoffee@yahoo.com>
