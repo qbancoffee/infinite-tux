@@ -1,4 +1,4 @@
-infinitetux.jar usr/share/games/infinitetux
+../infinitetux.jar usr/share/games/infinitetux
 infinitetux.appdata.xml usr/share/metainfo
 infinitetux.desktop usr/share/applications
 infinitetux.png usr/share/icons/hicolor/256x256/apps
