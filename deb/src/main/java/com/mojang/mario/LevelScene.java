@@ -65,7 +65,7 @@ public class LevelScene extends Scene implements SpriteContext
         
         // crete default dirs if they don't exist
         
-        tilesDir = new File(System.getProperty("user.home") + File.separatorChar + "infinitetux_data");
+        tilesDir = new File(System.getProperty("user.home") + File.separatorChar + ".infinitetux");
         try {
             levelsDir = new File(tilesDir.getCanonicalPath().toString() + File.separator + "levels");
     
@@ -109,6 +109,20 @@ public class LevelScene extends Scene implements SpriteContext
                 }
 
             }
+            
+            try{
+				    if (!levelsDir.exists()) {
+                    System.out.println("creating " + levelsDir.getName());
+                    levelsDir.mkdirs();
+                }
+				
+			}
+			catch(Exception e3){
+				e3.printStackTrace();
+				
+				}
+            
+            
             //JOptionPane.showMessageDialog(this, e.toString(), "Failed to load tile behaviors", JOptionPane.ERROR_MESSAGE);
             //JOptionPane.showMessageDialog(this, e.toString(), "Failed to load tile behaviors", JOptionPane.ERROR_MESSAGE);
         }        

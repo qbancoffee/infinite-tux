@@ -4,9 +4,10 @@
 
 override_dh_auto_build:
 	JAVA_HOME=/usr/lib/jvm/default-java
-	jh_build --no-javadoc --javacopts="-source 1.8 -target 1.8" \
-	--main=com.mojang.mario.FullScreenFrameLauncher ../infinitetux.jar src
+	jh_build --no-javadoc --javacopts="--release 8" \
+	--main=com.mojang.mario.FullScreenFrameLauncher infinitetux.jar src
 
 override_dh_install:
-	jar uf ../infinitetux.jar -C src/main/resources .
+	jar uf infinitetux.jar -C src/main/resources .
 	dh_install
+
