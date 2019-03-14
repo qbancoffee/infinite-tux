@@ -10,12 +10,6 @@ Make sure you have a Java version of at least 1.8.
 
 <br>
 
-Download executable
-===================
-https://github.com/qbancoffee/infinite-tux/releases
-
-<br>
-
 Gameplay Video
 --------------
 
@@ -27,6 +21,7 @@ AI Gameplay Video
 --------------
 
 [![AI Gameplay Video](https://img.youtube.com/vi/eiG-bJdwCyc/0.jpg)](https://www.youtube.com/watch?v=eiG-bJdwCyc)
+
 [![AI Gameplay Video over ground](https://img.youtube.com/vi/5RukWnRZ0yI/0.jpg)](https://www.youtube.com/watch?v=5RukWnRZ0yI)
 <br>
 
@@ -34,7 +29,7 @@ AI Gameplay Video
 ScreenShots
 -----------
 
-![Infinite Tux Title Screen](/screenshots/tux_title.png?raw=true "Infinite Tux Title Screen")
+![[Infinite Tux Title Screen](/screenshots/tux_title.png?raw=true "Infinite Tux Title Screen")
 
 ![Infinite Tux World Map](/screenshots/tux_map.png?raw=true "Infinite Tux World Map")
 
@@ -51,42 +46,17 @@ ScreenShots
 
 <br>
 
-Download executable
-===================
-https://github.com/qbancoffee/infinite-tux/releases
-
-
-Problems with OpenJDK on Ubuntu 14.04 and 16.04
------------------------------------------------
-Latest version now works correctly with OpenJDK!
-
 Compiling and running
 ---------------------
-The following was tested on Ubuntu 16.04 and 18.04. At a minimum you'll need a JDK of at least 1.6.<br>
+The following was tested on Ubuntu 16.04 and 18.04. At a minimum you'll need a JDK of at least 1.8.<br>
 on Ubuntu you can install 1.8 like this. 
 
 You can compile via any of the following methods.
-* Maven
-* Make
 * makeit
 * makeit.bat(for windows)
-
+* debuild
 ```bash
 sudo apt-get install openjdk-8-jdk
-```
-
-* With Maven
-if you don't have maven installed, this worked for me.
-```bash
-sudo apt-get install maven
-```
-Once installed, you can compile, package and run the resulting jar file.
-
-```
-mvn compile
-mvn package
-cd target
-java -jar infinitetux-1.1-jar-with-dependencies.jar
 ```
 
 You could also start the game by running a starter script created in the dist folder.
@@ -170,35 +140,4 @@ java -cp .;infinitetux.jar com.mojang.mario.FullScreenFrameLauncher
 ```
 
 
-Making a debian package
------------------------
-
-You'll need gnu make, a jdk and the following additional dependencies.
-
-devscripts
-debhelper
-jarwrapper
-
-If you don't have these installed, this worked for me.
-
-```bash
-sudo apt-get install devscripts debhelper jarwrapper
-```
-
-once the debian directory is created all you need to do every time you want to make an unsigned deb 
-package is run the following.
-```bash
-debuild -us -uc -I
-```
-
-If all goes well, this will produce an installable deb package on ubuntu and possibly other debian based systems.
-
-the deb file should be one level above the current directory.
-
-../infinitetux_1.1_all.deb
-
-Install
-```bash
-sudo dpkg -i infinitetux_1.1_all.deb
-```
 
