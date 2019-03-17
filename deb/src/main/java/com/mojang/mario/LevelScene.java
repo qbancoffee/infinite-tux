@@ -178,7 +178,7 @@ public class LevelScene extends Scene implements SpriteContext
         sprites.add(mario);
         startTime = 1;
         
-        timeLeft = (200 + 50 * (level.width/320 - 1) ) * 15;
+        timeLeft = (300 + 50 * (level.width/320 - 1) ) * 15;
 
         tick = 0;
     }
