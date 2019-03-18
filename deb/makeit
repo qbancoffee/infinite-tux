@@ -10,7 +10,7 @@ fi
 mkdir infinitetux
 mkdir dist
 
-javac -d \
+javac --release 8 -d \
 ./infinitetux ./src/main/java/com/mojang/mario/*.java \
 ./src/main/java/com/mojang/mario/level/*.java \
 ./src/main/java/com/mojang/mario/mapedit/*.java \
@@ -20,8 +20,6 @@ javac -d \
 ./src/main/java/com/mojang/sonar/sample/*.java
 
 cp -R ./src/main/resources/* ./infinitetux
-cp copyright_bsd_3_clause.txt ./infinitetux
-cp copyright ./infinitetux
 
 jar cfm infinitetux.jar manifest.txt -C ./infinitetux .
 mv infinitetux.jar ./dist

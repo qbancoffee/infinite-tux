@@ -6,12 +6,12 @@ Uploaders:
  qbancoffee <qbancoffee@yahoo.com>
 Standards-Version: 4.3.0
 Build-Depends:
- debhelper (>=12),
+ debhelper-compat (= 12),
  default-jdk,
  javahelper
 Homepage: https://github.com/qbancoffee/infinite-tux
-Vcs-Git: https://github.com/qbancoffee/infinite-tux.git
-Vcs-Browser: https://github.com/qbancoffee/infinite-tux
+Vcs-Git: https://salsa.debian.org/games-team/infinitetux.git
+Vcs-Browser: https://salsa.debian.org/games-team/infinitetux
 
 Package: infinitetux
 Description: 2D platformer game inspired by Infinite Mario

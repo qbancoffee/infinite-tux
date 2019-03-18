@@ -3,7 +3,7 @@ echo off
 IF EXIST .\infinitetux goto deleteimb
 mkdir infinitetux
 
-javac -d .\infinitetux .\src\main\java\com\mojang\mario\*.java .\src\main\java\com\mojang\mario\level\*.java .\src\main\java\com\mojang\mario\mapedit\*.java .\src\main\java\com\mojang\mario\sprites\*.java .\src\main\java\com\mojang\sonar\*.java .\src\main\java\com\mojang\sonar\mixer\*.java .\src\main\java\com\mojang\sonar\sample\*.java
+javac --release 8 -d .\infinitetux .\src\main\java\com\mojang\mario\*.java .\src\main\java\com\mojang\mario\level\*.java .\src\main\java\com\mojang\mario\mapedit\*.java .\src\main\java\com\mojang\mario\sprites\*.java .\src\main\java\com\mojang\sonar\*.java .\src\main\java\com\mojang\sonar\mixer\*.java .\src\main\java\com\mojang\sonar\sample\*.java
 xcopy src\main\resources\*  infinitetux /E/Y
 
 jar cfm infinitetux.jar manifest.txt -C .\infinitetux . 

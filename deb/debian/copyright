@@ -9,6 +9,7 @@ Comment:
  release.zip contains the source code and the license text.
  this is the original source code that was later taken and modified
  by Chris Lewis for the Mario AI competition allowing it to run on Macs.
+ The original non-free artwork by Nintendo was completely replaced.
 
 License: public-domain
  The code (/src/) is released as public domain, so you can do with it
