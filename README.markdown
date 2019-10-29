@@ -174,7 +174,9 @@ Making a debian package
 
 You'll need gnu make, a jdk and the following additional dependencies.
 Also I had to do this on a debian unstable installation because my Ubuntu
-installation does not have the latest debhelper and other dependencies. 
+installation does not have the latest debhelper and other dependencies.
+You can do this on Ubuntu 18.04 however. 
+follow these instructions and then see the end of this section.
 
 devscripts
 debhelper
@@ -191,8 +193,28 @@ sudo apt-get install devscripts debhelper jarwrapper javahelper default-jdk defa
 Enter the deb directory.
 ```bash
 cd deb
+```
+Create the deb package
+----------------------
+
+Debian
+------
+
+```bash
 debuild -us -uc -I
 ```
+
+
+Ubuntu 18.04
+-------------
+```bash
+ dpkg-buildpackage -d -b -rfakeroot -us -uc
+ ```
+ 
+
+
+
+
 If all goes well, this will produce an installable deb package.
 
 the deb file should be one level above the current directory.
@@ -200,7 +222,10 @@ the deb file should be one level above the current directory.
 ../infinitetux_1.1_all.deb
 
 Install
+-------
 ```bash
 sudo dpkg -i infinitetux_1.1_all.deb
 ```
+
+
 
